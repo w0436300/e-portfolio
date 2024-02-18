@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Switcher</title>
+<style>
+.TextSwitcher__name {
+  display: none;
+}
+.TextSwitcher__name.active {
+  display: block;
+  animation: fadeIn 0.5s forwards;
+}
+.TextSwitcher__name span {
+  opacity: 0;
+  animation: fadeInLetter 0.5s forwards;
+  animation-delay: var(--delay);
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInLetter {
+  to {
+    opacity: 1;
+  }
+}
+
+</style>
+</head>
+<body>
+
+    
+        <div class="TextSwitcher" style="min-width: 433px;">
+    <p class="TextSwitcher__name active" style=""><span class="" style="--delay: 0s;">
+        b
+      </span><span class="" style="--delay: 0.03s;">
+        r
+      </span><span class="" style="--delay: 0.06s;">
+        a
+      </span><span class="" style="--delay: 0.09s;">
+        n
+      </span><span class="" style="--delay: 0.12s;">
+        d
+      </span><span class="no-letter" style="--delay: 0.15s;">
+         
+      </span><span class="" style="--delay: 0.18s;">
+        r
+      </span><span class="" style="--delay: 0.21s;">
+        e
+      </span><span class="" style="--delay: 0.24s;">
+        f
+      </span><span class="" style="--delay: 0.27s;">
+        r
+      </span><span class="" style="--delay: 0.3s;">
+        e
+      </span><span class="" style="--delay: 0.32999999999999996s;">
+        s
+      </span><span class="" style="--delay: 0.36s;">
+        h
+      </span></p><p class="TextSwitcher__name" style="display: none;"><span class="" style="--delay: 0s;">
+        p
+      </span><span class="" style="--delay: 0.3;">
+        l
+      </span><span class="" style="--delay: 0.6s;">
+        a
+      </span><span class="" style="--delay: 0.9s;">
+        y
+      </span><span class="" style="--delay: 0.12s;">
+        f
+      </span><span class="" style="--delay: 0.15s;">
+        u
+      </span><span class="" style="--delay: 0.18s;">
+        l
+      </span><span class="no-letter" style="--delay: 0.21s;">
+         
+      </span><span class="" style="--delay: 0.24s;">
+        s
+      </span><span class="" style="--delay: 0.27s;">
+        h
+      </span><span class="" style="--delay: 0.3s;">
+        a
+      </span><span class="" style="--delay: 0.32999999999999996s;">
+        p
+      </span><span class="" style="--delay: 0.36s;">
+        e
+      </span><span class="" style="--delay: 0.39s;">
+        s
+      </span></p><p class="TextSwitcher__name" style="display: none;"><span class="" style="--delay: 0s;">
+        c
+      </span><span class="" style="--delay: 0.03s;">
+        h
+      </span><span class="" style="--delay: 0.06s;">
+        e
+      </span><span class="" style="--delay: 0.09s;">
+        e
+      </span><span class="" style="--delay: 0.12s;">
+        r
+      </span><span class="" style="--delay: 0.15s;">
+        i
+      </span><span class="" style="--delay: 0.18s;">
+        n
+      </span><span class="" style="--delay: 0.21s;">
+        g
+      </span><span class="no-letter" style="--delay: 0.24s;">
+         
+      </span><span class="" style="--delay: 0.27s;">
+        c
+      </span><span class="" style="--delay: 0.3s;">
+        o
+      </span><span class="" style="--delay: 0.32999999999999996s;">
+        l
+      </span><span class="" style="--delay: 0.36s;">
+        o
+      </span><span class="" style="--delay: 0.39s;">
+        r
+      </span><span class="" style="--delay: 0.42s;">
+        s
+      </span></p></div>
+      <script>
+        const switcher = document.querySelector('.TextSwitcher');
+        const phrases = document.querySelectorAll('.TextSwitcher__name');
+      
+        switcher.addEventListener('click', () => {
+          let current = switcher.querySelector('.active');
+          current.classList.remove('active');
+          
+          let next = current.nextElementSibling || phrases[0];
+          next.classList.add('active');
+      
+          // 重置所有字母的动画
+          phrases.forEach(phrase => {
+            phrase.querySelectorAll('span').forEach(span => {
+              span.style.animation = 'none';
+              span.offsetHeight; // 强制重绘
+              span.style.animation = null;
+            });
+          });
+          
+          // 重新开始下一组字母的动画
+          next.querySelectorAll('span').forEach(span => {
+            span.style.animation = 'fadeInLetter 0.5s forwards';
+            span.style.animationDelay = span.style.getPropertyValue("--delay");
+          });
+        });
+      </script>
+
+</body>
+</html>

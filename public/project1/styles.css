@@ -1,0 +1,24 @@
+#theGame {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+#theGame table {
+    border-collapse: collapse; 
+    margin: 0 auto;
+}
+
+#theGame td {
+    width: 50px; 
+    height: 50px; 
+    border: 1px solid black; 
+    cursor: pointer; 
+}
+td {
+    width: 50px; 
+    height: 50px; 
+    border: 1px solid black; 
+    cursor: pointer; 
+    color: rgb(217, 255, 0);
+}
+

@@ -1,0 +1,445 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Home</title>
+<meta name="author" content="Xinping Wang" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+<link rel="stylesheet" href="./public/css/style.css">
+
+<!-- Import Vue.js -->
+<script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+</head>
+
+<body>
+    
+    <div id="app" class="bg-light">
+        <!-- nav Start -->
+        <nav class=" navbar navbar-expand-lg navbar-light sticky-top " :class="{ 'is-sticky': isSticky }">
+            <div class="container-fluid  ">
+                <a class="navbar-brand" href="index.html">
+                    <i src="#" class="fa fa-leaf " alt="logo">Claire </i>
+                    <span class="page-header__subject">
+                    <div class="TextSwitcher" style="min-width: 433px;">
+                    <p class="TextSwitcher__name" style="">
+                        <span class="" style="--delay: 0s;">
+                        b
+                      </span><span class="" style="--delay: 0.03s;">
+                        r
+                      </span><span class="" style="--delay: 0.06s;">
+                        a
+                      </span><span class="" style="--delay: 0.09s;">
+                        n
+                      </span><span class="" style="--delay: 0.12s;">
+                        d
+                      </span><span class="no-letter" style="--delay: 0.15s;">
+                         
+                      </span><span class="" style="--delay: 0.18s;">
+                        r
+                      </span><span class="" style="--delay: 0.21s;">
+                        e
+                      </span><span class="" style="--delay: 0.24s;">
+                        f
+                      </span><span class="" style="--delay: 0.27s;">
+                        r
+                      </span><span class="" style="--delay: 0.3s;">
+                        e
+                      </span><span class="" style="--delay: 0.32999999999999996s;">
+                        s
+                      </span><span class="" style="--delay: 0.36s;">
+                        h
+                      </span></p>
+                      <p class="TextSwitcher__name" style="display: none;"><span class="" style="--delay: 0s;">
+                        p
+                      </span><span class="" style="--delay: 0.3;">
+                        l
+                      </span><span class="" style="--delay: 0.6s;">
+                        a
+                      </span><span class="" style="--delay: 0.9s;">
+                        y
+                      </span><span class="" style="--delay: 0.12s;">
+                        f
+                      </span><span class="" style="--delay: 0.15s;">
+                        u
+                      </span><span class="" style="--delay: 0.18s;">
+                        l
+                      </span><span class="no-letter" style="--delay: 0.21s;">
+                         
+                      </span><span class="" style="--delay: 0.24s;">
+                        s
+                      </span><span class="" style="--delay: 0.27s;">
+                        h
+                      </span><span class="" style="--delay: 0.3s;">
+                        a
+                      </span><span class="" style="--delay: 0.32999999999999996s;">
+                        p
+                      </span><span class="" style="--delay: 0.36s;">
+                        e
+                      </span><span class="" style="--delay: 0.39s;">
+                        s
+                      </span></p><p class="TextSwitcher__name" style="display: none;"><span class="" style="--delay: 0s;">
+                        c
+                      </span><span class="" style="--delay: 0.03s;">
+                        h
+                      </span><span class="" style="--delay: 0.06s;">
+                        e
+                      </span><span class="" style="--delay: 0.09s;">
+                        e
+                      </span><span class="" style="--delay: 0.12s;">
+                        r
+                      </span><span class="" style="--delay: 0.15s;">
+                        i
+                      </span><span class="" style="--delay: 0.18s;">
+                        n
+                      </span><span class="" style="--delay: 0.21s;">
+                        g
+                      </span><span class="no-letter" style="--delay: 0.24s;">
+                         
+                      </span><span class="" style="--delay: 0.27s;">
+                        c
+                      </span><span class="" style="--delay: 0.3s;">
+                        o
+                      </span><span class="" style="--delay: 0.32999999999999996s;">
+                        l
+                      </span><span class="" style="--delay: 0.36s;">
+                        o
+                      </span><span class="" style="--delay: 0.39s;">
+                        r
+                      </span><span class="" style="--delay: 0.42s;">
+                        s
+                      </span></p></div></span>
+                    
+                    
+                </a>
+                
+                    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="navbar-nav ms-auto align-items-center mb-2 mb-lg-0 ">
+                            <li class="nav-item me-4 nav-item-divider" v-for="(menu, index) in menus" :key="index">
+                                
+                                <a class="nav-link fs-4" :href="menu.anchor">{{ menu.text }}</a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    
+            </div>
+        </nav>
+        <!-- nav end -->
+
+        <!-- About Start -->
+        <about-section></about-section>
+        <!-- About End -->
+
+        
+            <!-- Skills Start -->
+            <div id="skills" class="container-fluid  py-6 my-0 my-5">
+                <div class="container">
+                
+                    <div class="text-center">
+                        <small class="d-inline-block fw-bold text-dark text-uppercase mb-3">Skills I can provides</small>
+                        <h1 class="display-5 mb-5">My Skills</h1>
+                    </div>
+
+                    <div class=" text-center">
+                        <ul class="nav justify-content-center mb-5">
+                            <li class="nav-item p-2">
+                                <a class=" py-2 mx-2  active" data-bs-toggle="pill" href="#tab-1">
+                                    <span class="text-dark" style="width: 150px;">Full Stack Developer</span>
+                                </a>
+                            </li>
+                            <li class="nav-item p-2">
+                                <a class="py-2 mx-2" data-bs-toggle="pill" href="#tab-7">
+                                    <span class="text-dark" style="width: 150px;">Designer</span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane fade show p-0 active">
+                                <div class="row g-5 custom-row">
+                                    <div class="col-lg-6">
+                                        <div class="menu-item d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded-circle" src="./public/img/logo-javascript.svg" alt="">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                    <h4>Java Script</h4>
+                                                    <h4 class="text-primary">Advanced</h4>
+                                                </div>
+                                                <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="menu-item d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded-circle" src="./public/img/logo-javascript.svg" alt="">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                    <h4>Java Script</h4>
+                                                    <h4 class="text-primary">Advanced</h4>
+                                                </div>
+                                                <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="menu-item d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded-circle" src="./public/img/logo-javascript.svg" alt="">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                    <h4>CSS</h4>
+                                                    <h4 class="text-primary">Advanced</h4>
+                                                </div>
+                                                <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="menu-item d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded-circle" src="./public/img/logo-javascript.svg" alt="">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                    <h4>GIT</h4>
+                                                    <h4 class="text-primary">Advanced</h4>
+                                                </div>
+                                                <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </div>
+
+
+                            <div id="tab-7" class="tab-pane fade show p-0">
+                                <div class="row g-5 custom-row ">
+                                    <div class="col-lg-6">
+                                        <div class="menu-item d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded-circle" src="./public/img/logo-javascript.svg" alt="">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                    <h4>Photoshop</h4>
+                                                    <h4 class="text-primary">Advanced</h4>
+                                                </div>
+                                                <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 ">
+                                        <div class="menu-item d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded-circle" src="./public/img/logo-javascript.svg" alt="">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                    <h4>Figma</h4>
+                                                    <h4 class="text-primary">Advanced</h4>
+                                                </div>
+                                                <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 ">
+                                        <div class="menu-item d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded-circle" src="./public/img/logo-javascript.svg" alt="">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                    <h4>Sketch</h4>
+                                                    <h4 class="text-primary">Advanced</h4>
+                                                </div>
+                                                <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 ">
+                                        <div class="menu-item d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded-circle" src="./public/img/logo-javascript.svg" alt="">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                    <h4>Blooming</h4>
+                                                    <h4 class="text-primary">Advanced</h4>
+                                                </div>
+                                                <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Skills End -->
+
+            <!-- Plan Start -->
+            <div id = "plan" class="container-fluid py-6 my-0 my-5">
+                <div class="container">
+                    <div class="text-center">
+                        <small class="d-inline-block fw-bold text-dark text-uppercase mt-4 mb-3">Services I can provides</small>
+                        <h1 class="display-5 mb-3">My Plan</h1>
+                    </div>
+                    <!-- Services Items -->
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 service-item">
+                            <div class="icon">
+                                <i class="fa fa-magic"></i>
+                                <span></span>
+                            </div>
+                           
+                            <h4 >Full Stack Development </h4>
+                            <p>Continuously improve my proficiency in current frameworks and libraries, like React, Vue, and Angular. </p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 service-item">
+                            <div class="icon">
+                                <i class="fa fa-leaf"></i>
+                                <span></span>
+                            </div>
+                            <h4>Grapinc Design</h4>
+                            <p>I make designs at the client's request, banner design, posters, digital designs among others.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 service-item">
+                            <div class="icon">
+                                <i class="fa fa-pen"></i>
+                                <span></span>
+                            </div>
+                            <h4>UI/UX Design</h4>
+                            <p>I intend to work on at least three significant side projects or contribute to open-source projects relevant to full-stack development.</p>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+            <!-- Plan End -->
+ 
+        <!-- projects start-->
+        <div id="project" class="container-fluid  py-6 mt -4 my-0 my-5">
+            <div class="container">
+                <div class="text-center">
+                    <small class="d-inline-block fw-bold text-dark text-uppercase mb-3">My Jobs
+                    </small>
+                    <h1 class="display-5 mb-5">My Projects</h1>
+                </div>
+
+                <div class=" text-center">
+                    <div class="container py-4 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                            <div class="square">
+                                <img src="./public/img/p-6.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                                <div class="content">
+                                    <p class="text-white"><a href="./public/project1/index.html">project</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 mb-4">
+                            <div class="square">
+                                <img src="./public/img/3.jpeg" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                                <div class="content">
+                                    <p class="text-white">PROJECT</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 mb-4">
+                            <div class="square">
+                                <img src="./public/img/4.jpeg" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                                <div class="content">
+                                    <p class="text-white">Your Text Here</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 mb-4">
+                            <div class="square">
+                                <img src="./public/img/p1.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                                <div class="content">
+                                    <p class="text-white">PROJECT</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 mb-4">
+                            <div class="square">
+                                <img src="./public/img/p2.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                                <div class="content">
+                                    <p class="text-white">PROJECT</p>
+                                </div>
+                            </div>
+                        </div>
+                                    
+                            
+                    </div>            
+                </div>
+            </div>
+        </div>
+        <!-- Project End -->
+        
+        <!-- contact start-->
+        <contact-form id="contact"></contact-form>
+        <!-- contact end-->
+
+        <!-- Footer Start -->
+
+        <footer class="bg-success text-center ">
+            <div class="container p-1">
+                <div class="row">
+                    <div class="  mb-2 mb-md-0">
+                        <h5 class=" mt-2">
+                            Xinping <span>Wang</span>
+                         </h5>
+                         <h6 class="footer-education">
+                            full-stack Developer and Designer
+                         </h6>
+                        <nav class="footer-social">
+                            <a href="https://www.facebook.com/" class="footer-social-link">
+                               facebook
+                            </a>
+              
+                            <a href="https://www.instagram.com/"  class="footer__social-link">
+                               ins
+                            </a>
+              
+                            <a href="https://Linkedin.com/"  class="footer__social-link">
+                              Linkedin
+                            </a>
+                          </nav>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="bg-secondary text-center p-3">
+                © 2023 Copyright:
+                <a class="text-dark" href="#">xinping.com</a>
+            </div>
+        </footer>
+	    <!-- Footer End  -->
+    </div><!-- id=app -->
+ <!-- </div> -->
+ 
+
+<!-- Import Components -->
+<script src="./public/js/main.js"></script>
+<script src="./public/components/ContactForm.js"></script>
+<script src="./public/components/About.js"></script>
+
+<!-- Mount App -->
+<script>
+    const mountedApp = app.mount('#app')
+</script>
+
+</body>
+
+</html>
