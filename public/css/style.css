@@ -2,56 +2,18 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-
-.TextSwitcher {
-  position: relative;
-  height: 1.25em;
-  width: 100px; /* You can set this to the width you want */
+.custom-bg {
+  background: linear-gradient(270deg, #FDC1AC, #FCE0CF, #FDFCFC, #FBDBDD);
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
 }
-
-.TextSwitcher__name {
-  line-height: 1.25em;
-  height: 100%;
-  display: flex;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-}
-
-.TextSwitcher__name span {
-  flex-shrink: 0;
-  display: block;
-  text-align: center;
-  transform-origin: bottom;
-  transform: translateY(100%);
-  animation: rollUp 1s forwards;
-  animation-delay: var(--delay); /* Delay is directly applied here */
-}
-
-@keyframes rollUp {
-  0% {
-      transform: translateY(100%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateY(0);
-      opacity: 1;
-  }
-}
-
-
-
 
 .work-item img {
   cursor: pointer;
 }
 
-.rectangle {
-  width: 26px;
-  height: 300px;
-  margin-bottom: 10px;
-  transition: background-color 0.3s ease;
+.custom-btn {
+  background-color: #333;
 }
 
 .square {
@@ -93,7 +55,7 @@
     transform: translateY(0);
   }
 }
-.text-primary {
+.custom-primary {
   color: rgb(237, 75, 80) !important;
 }
 
@@ -106,11 +68,11 @@
   width: 100%;
   position: fixed;
   color: rgb(247, 241, 241);
-  background: rgb(237, 75, 80);
+  background: #f9f9f9;
   animation: crSlideInDown 0.5s ease-out 0s 1 both;
 }
 .navbar.is-sticky .navbar-nav .nav-link {
-  color: white;
+  color: #8b6b80;
 }
 .navbar.is-sticky .nav-item a::after {
   background: white;
@@ -120,13 +82,14 @@ li.nav-item a {
   position: relative;
   display: inline-block;
   text-decoration: none;
+  color: #85677A;
 }
 li.nav-item a::after {
   content: "";
   display: block;
   width: 0;
   height: 1.5px;
-  background: black;
+  background: #85677A;
   transition: all 0.3s ease;
   position: absolute;
   bottom: 5px;
@@ -140,23 +103,46 @@ li.nav-item a:hover::after {
   transform: scaleX(1);
 }
 
-#about .img-fluid {
+.custom-primary {
+  color: #85677A !important;
+}
+
+#about, #contact {
+  background: linear-gradient(270deg, #FDC1AC, #FCE0CF, #FDFCFC, #FBDBDD);
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#about .social-links-container a, #contact .social-links-container a {
+  display: none;
+}
+#about .custom-img-size, #contact .custom-img-size {
   max-width: 70%;
   height: auto;
 }
-#about .team-icon .btn-md-square {
+#about .team-icon .btn-md-square, #contact .team-icon .btn-md-square {
   width: 50px;
   height: 50px;
   padding: 10px;
 }
-#about .team-icon .btn-primary {
-  background-color: rgb(237, 75, 80);
-  border-color: rgb(237, 75, 80);
+#about .team-icon .btn-primary, #contact .team-icon .btn-primary {
+  background-color: #f9f9f9;
+  border-color: #f9f9f9;
 }
-#about .team-icon .btn-primary i {
+#about .team-icon .btn-primary i, #contact .team-icon .btn-primary i {
   color: rgb(242, 236, 237);
 }
-#about .round-button {
+#about .round-button, #contact .round-button {
   background-color: rgb(124, 136, 230);
   width: 50px;
   height: 50px;
@@ -167,9 +153,9 @@ li.nav-item a:hover::after {
   padding: 0;
 }
 
-.menu-item .img-fluid {
-  max-width: 10%;
-  height: auto;
+.img-fluid {
+  max-width: auto;
+  height: 25px;
 }
 
 .custom-row {
@@ -249,10 +235,6 @@ li.nav-item a:hover::after {
 }
 #plan .service-item:hover .icon {
   top: -10px;
-}
-
-#contact {
-  background-color: rgb(237, 75, 80);
 }
 
 contact-border {

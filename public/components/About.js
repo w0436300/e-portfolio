@@ -1,39 +1,27 @@
 app.component('about-section', {
+
     template: `
     <div id="about" class="container-fluid bg-light py-6 my-6 mt-0 vh-100 d-flex align-items-center">
+
         <div class="container ">
             <div class="row">
                 <div class="col-lg-7 mx-auto d-flex flex-column justify-content-center">
-                    <h1 class="display-1 mb-4">I'm <span class="text-primary">{{ name }}</span><br> Developer and Designer</h1>
+                    <h1 class="display-1 mb-4">I'm <span class="text-primary custom-primary"></span></h1>
                     <div class="col-lg-7 text-secondary d-flex flex-column justify-content-left" >
-                        <h4>Crafting Creative and Delightful Digital Experiences through Code and Design.
-                        Full Stack Developer and Designer. 
-                        <br>I create web pages with UI / UX user interface,</h4>
+                        <h4>
+                        <span class="typed-text"></span></h4>
                     </div>
+                    
                     <div class="social-links-container icon">
-                        <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2" href=""><i class="fa fas fa-share-alt"></i></a>
-                        <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target= "_blank" href="https://github.com/w0436300"><i class="fab fa-github"></i></a>
+                        <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target= "_blank" href="https://www.linkedin.com/mynetwork/"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 <div class="fun-mouse col-lg-5 mx-auto">
-                    <div class="row text-center">
-                        <div class="d-flex justify-content-center align-items-center">
-                        <p>Move your mouse across this area...</p>
-                        <button v-if="!unlocked" @click="unlockAudio" class = " mb-3 border-0 round-button"><i class="text-dark fa fa-music"></i></button>
-                        </div>
-                        <div class="col" v-for="rect in rectangles" :key="rect.id">
-                        
-                            <div class="rectangle" 
-                                 @mousemove="onMousemove($event, rect)" 
-                                 :style="{ backgroundColor: \`hsl(\${rect.hue}, 100%, 80%)\` }"
-                                 
-                                 >
-                                 
-                            </div>
+                    <div class="row">
+                        <img style="height:500px; width:auto" src="./public/img/photo.png">
+ 
 
-                        </div>
                     </div>
                 </div>
             </div>
@@ -42,35 +30,31 @@ app.component('about-section', {
     `,
     data() {
         return {
-            unlocked: false,
-            name: 'Claire',
-            rectangles: [
-                { id: 1, hue: 10, sound: './public/audios/do.mp4' },
-                { id: 2, hue: 20, sound: './public/audios/re.wav' },
-                { id: 3, hue: 200, sound: './public/audios/mi.wav' },
-                { id: 4, hue: 100, sound: './public/audios/fa.wav' },
-                { id: 5, hue: 79, sound: './public/audios/sol.wav' },
-                { id: 6, hue: 43, sound: './public/audios/la.wav' },
-                { id: 7, hue: 88, sound: './public/audios/si.wav' },
-                { id: 8, hue: 99, sound: './public/audios/do.wav' }
-            ]
+            unlocked: false,  
         };
     },
-    methods: {
-        unlockAudio() {
-            this.rectangles.forEach(rect => {
-                const audio = new Audio(rect.sound);
-                audio.play().then(() => {}).catch(() => {});
-            });
-            this.unlocked = true;
-        },
-        onMousemove(e, rect) {
-            rect.hue = e.clientX % 360;
-            this.playSound(rect.sound);
-        },
-        playSound(soundPath) {
-            const audio = new Audio(soundPath);
-            audio.play();
-        }
+    mounted() {
+        new Typed('.text-primary', {
+            strings: ["Claire", "a Developer", "a Designer"],
+            typeSpeed: 70,
+            backSpeed: 50,
+            loop: true,
+        });
+        new Typed('.typed-text', {
+            strings: ["Crafting Creative and Delightful Digital Experiences through Code and Design.<br>I create web pages with UI / UX user interface."],
+            startDelay : 1 ,
+            typeSpeed: 15,
+            loop: false,
+            showCursor: false, 
+            onComplete: function(self) {
+                const links = document.querySelectorAll('.social-links-container a');
+
+                links.forEach((link, index) => {
+                    setTimeout(() => {
+                        link.style.display = 'inline-block';
+                    }, index * 200); 
+                });
+            }
+        });
     }
 });

@@ -1,4 +1,4 @@
-$primary-color: rgb(237,75,80);
+$primary-color: #f9f9f9;
 $secondary-color: rgb(124, 136, 230);
 $background-color: #f6f6f6;
 $text-color: rgb(247, 241, 241);
@@ -9,18 +9,24 @@ $content-background:rgba(232, 206, 206, 0.5);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.custom-bg{
+  background: linear-gradient(270deg, #FDC1AC,  #FCE0CF, #FDFCFC, #FBDBDD);
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+}
+
+
 .work-item {
   img {
     cursor: pointer; 
   }
 }
 
-.rectangle {
-  width: 26px; 
-  height: 300px; 
-  margin-bottom: 10px; 
-  transition: background-color 0.3s ease; 
+.custom-btn{
+  background-color: #333;
 }
+
+
 
 
 // project
@@ -67,7 +73,7 @@ $content-background:rgba(232, 206, 206, 0.5);
   }
 }
 
-.text-primary {
+.custom-primary {
   color: rgb(237,75,80) !important;
 }
 
@@ -87,7 +93,7 @@ $content-background:rgba(232, 206, 206, 0.5);
 
     .navbar-nav {
       .nav-link {
-        color: white; 
+        color: #8b6b80; 
       }
     }
 
@@ -105,13 +111,14 @@ li.nav-item {
     position: relative;
     display: inline-block;
     text-decoration: none;
+    color:#85677A;
 
     &::after {
       content: '';
       display: block;
       width: 0;
       height: 1.5px;
-      background: black; 
+      background: #85677A; 
       transition: all 0.3s ease;
       position: absolute;
       bottom: 5px;
@@ -128,11 +135,35 @@ li.nav-item {
   }
 }
 
-
+.custom-primary{
+    color: #85677A !important;
+  }
 
 // about start
-#about {
-  .img-fluid {
+#about, #contact {
+  background: linear-gradient(270deg, #FDC1AC,  #FCE0CF, #FDFCFC, #FBDBDD);
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+  
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  
+
+  .social-links-container a {
+    display: none; 
+}
+
+  .custom-img-size {
     max-width: 70%; 
     height: auto; 
   }
@@ -167,9 +198,9 @@ li.nav-item {
 // about end
 
 // skills start
-.menu-item .img-fluid {
-  max-width: 10%; 
-  height: auto; 
+.img-fluid {
+  max-width: auto; 
+  height: 25px; 
 }
 
 .custom-row {
@@ -262,13 +293,14 @@ li.nav-item {
 
 
 // contact 
-#contact{
-  background-color:  rgb(237,75,80);
-} 
+
 
 contact-border{
   max-height: 100; 
 }
+
+
+
 @media (max-width: 768px) {
   .hide-text-small {
       display: none;

@@ -5,9 +5,8 @@ const app = Vue.createApp({
 			menus: [
 				{ text: 'ABOUT', anchor: './index.html#about' },
                 { text: 'SKILLS', anchor: './index.html#skills' },
-                { text: 'PLAN', anchor: './index.html#plan' },
                 { text: 'PROJECT', anchor: './index.html#project' },
-                { text: 'RESUME', anchor: 'resume.html' },
+                { text: 'RESUME', anchor: '/portfolio/resume.html' },
                 { text: 'CONTACT', anchor: './index.html#contact' }
 			],
 			contents: [
@@ -42,6 +41,20 @@ const app = Vue.createApp({
 	}
 })
 
+
+
+function updateProgressBars(progressValues) {
+	progressValues.forEach((progress, index) => {
+	  const progressBarId = `progressBar${index + 1}`; 
+	  const progressBar = document.getElementById(progressBarId);
+	  if (progressBar) {
+		progressBar.style.width = progress + '%';
+		progressBar.setAttribute('aria-valuenow', progress);
+	  }
+	});
+  }
+  
+  updateProgressBars([95, 90, 97, 90]);
 
 
 
