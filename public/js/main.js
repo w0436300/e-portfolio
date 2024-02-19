@@ -57,11 +57,70 @@ function updateProgressBars(progressValues) {
   updateProgressBars([95, 90, 97, 90]);
 
 
-
-
-
-
+  document.addEventListener("DOMContentLoaded", () => {
 	
+	let sharedObserverOptions = {
+		root: null,
+		threshold: 0.7, //common 10%
+	};
 
+	let projectObserverOptions = {
+		root: null,
+		threshold: 0.7, // 70% for project card
+	};  
+
+
+	let sharedObserverCallback = (entries, observer) => {
+	  entries.forEach(entry => {
+		if (entry.isIntersecting) {
+		 
+		  entry.target.classList.add('animate__animated');
+		  
+		 
+		  if (entry.target.id === 'skills-title') {
+			entry.target.classList.add('animate__bounce');
+		  } else if (entry.target.id === 'skills-left') {
+			entry.target.classList.add('animate__fadeInLeft');
+		  } else if (entry.target.id === 'skills-right') {
+			entry.target.classList.add('animate__fadeInRight');
+		  } else if (entry.target.id === 'about-image') {
+			entry.target.classList.add('animate__fadeIn');
+		  } 
+  
+				  observer.unobserve(entry.target);
+		}
+	  });
+	};
+
+	let projectObserverCallback = (entries, observer) => {
+		entries.forEach(entry => {
+		  if (entry.isIntersecting) {
+			entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+
+		  if (entry.target.id ==='projects-title') {
+			entry.target.classList.add('animate__jackInTheBox');
+		  }else if (entry.target.classList.contains('project-card')) {
+			entry.target.classList.add('animate__fadeInUp');
+		  } 
+			
+			entry.target.style.animationDelay = entry.target.dataset.animationDelay || '0.9s';
+			observer.unobserve(entry.target);
+		  }
+		});
+	  };
+
+	  let sharedObserver = new IntersectionObserver(sharedObserverCallback, sharedObserverOptions);
+      let projectObserver = new IntersectionObserver(projectObserverCallback, projectObserverOptions);
+
+	  document.querySelectorAll('#skills-title, #skills-left, #skills-right, #about-image').forEach(element => {
+		sharedObserver.observe(element);
+	  });
 	
+	 
+	  document.querySelectorAll(' #projects-title, .project-card').forEach(card => {
+		projectObserver.observe(card);
+	  });
 
+  });
+  
+  

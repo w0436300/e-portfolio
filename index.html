@@ -18,6 +18,8 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
@@ -30,6 +32,10 @@
   <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
   <!--typed.js-->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!--jquery.js-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 
 
 </head>
@@ -47,7 +53,7 @@
         <div class="social-links-container d-flex flex-row">
           <a class="share-link btn rounded-circle mb-2 me-2" href="https://github.com/w0436300" target="_blank"><i
               class="fab fa-github"></i></a>
-          <a class="share-link btn rounded-circle mb-2 me-2" href="https://www.linkedin.com/mynetwork/"
+          <a class="share-link btn rounded-circle mb-2 me-2" href="https://www.linkedin.com/in/claire-w-b05712193/"
             target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
 
@@ -76,16 +82,19 @@
 
 
     <!-- Skills Start -->
-    <div id="skills" class="container-fluid bg-light pt-5 pb-5">
+    <div id="skills" class="container-fluid bg-light pt-5 pb-5 ">
       <div class="container">
         <div class="text-center">
-          <small class="d-inline-block fw-bold text-dark text-uppercase mb-3">Skills I can provides</small>
-          <h1 class=" mb-3">My Skills</h1>
+          <div id="skills-title" class="text-center">
+            <small class="d-inline-block fw-bold text-dark text-uppercase mb-3 animate__animated animate__bounce">Skills I can provides</small>
+            <h1 class=" mb-3">My Skills</h1>
+          </div>
+          
         </div>
         <div class="row">
           <div class="col-md-7">
 
-            <div id="plan" class="container-fluid  ">
+            <div id="skills-left" class="container-fluid  ">
               <div class="container">
                 <!-- Services Items -->
                 <div class="row">
@@ -122,7 +131,7 @@
           </div>
 
 
-          <div class="col-md-5 d-flex align-items-center">
+          <div id="skills-right" class="col-md-5 d-flex align-items-center">
             <div class="w-100">
 
               <div class="d-flex justify-content-between align-items-center">
@@ -195,8 +204,8 @@
 
     <!-- projects start-->
     <div id="project" class="container-fluid mt-4 ">
-      <div class="container">
-        <div class="text-center">
+      <div  id="projects-title" class="container">
+        <div  class="text-center">
           <small class="d-inline-block fw-bold text-dark text-uppercase mb-3">My Jobs
           </small>
           <h1 class=" mb-5">My Projects</h1>
@@ -212,7 +221,7 @@
           <div class="container">
             <div class="row">
 
-              <div class="col-md-4">
+              <div class="col-md-4 project-card">
                 <div class="card mb-4 box-shadow">
                   <a href="./public/projects/Halifax-BusTracker/index.html" target="_blank">
                     <img class="card-img-top"
@@ -233,7 +242,7 @@
                 </div>
               </div>
 
-              <div class="col-md-4">
+              <div class="col-md-4 project-card">
                 <div class="card mb-4 box-shadow">
                   <a href="https://github.com/w0436300/CameraMaster.git" target="_blank">
                     <img class="card-img-top"
@@ -254,7 +263,7 @@
                 </div>
               </div>
 
-              <div class="col-md-4">
+              <div class="col-md-4 project-card">
                 <div class="card mb-4 box-shadow">
                   <a href="./public/projects/Weather-Api/index.html" target="_blank">
                     <img class="card-img-top"
@@ -282,7 +291,7 @@
 
     <!-- contact start-->
 
-    <div class="container">
+    <div id = "contact" class="container">
       <div class="text-center ">
         <small class="d-inline-block fw-bold text-uppercase mt-4 mb-2 text-dark">GET IN TOUCH</small>
         <h1 class="text-dark">Contact Me</h1>
@@ -295,7 +304,7 @@
           <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target="_blank"
             href="https://github.com/w0436300"><i class="fab fa-github"></i></a>
           <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target="_blank"
-            href="https://www.linkedin.com/mynetwork/"><i class="fab fa-linkedin"></i></a>
+            href="https://www.linkedin.com/in/claire-w-b05712193/"><i class="fab fa-linkedin"></i></a>
         </div>
 
       </div>

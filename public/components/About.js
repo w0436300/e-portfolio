@@ -14,15 +14,15 @@ app.component('about-section', {
                     
                     <div class="social-links-container icon">
                         <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target= "_blank" href="https://github.com/w0436300"><i class="fab fa-github"></i></a>
-                        <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target= "_blank" href="https://www.linkedin.com/mynetwork/"><i class="fab fa-linkedin"></i></a>
+                        <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target= "_blank" href="https://www.linkedin.com/in/claire-w-b05712193/"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-                <div class="fun-mouse col-lg-5 mx-auto">
-                    <div class="row">
+                <div class="fun-mouse col-lg-5 mx-auto" id="about-image">
+                    
                         <img style="height:500px; width:auto" src="./public/img/photo.png">
  
 
-                    </div>
+                    
                 </div>
             </div>
         </div>

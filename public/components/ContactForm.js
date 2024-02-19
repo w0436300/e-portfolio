@@ -1,7 +1,7 @@
 app.component('contact-form', {
     template: `
     <div class="container-fluid contact vh-100 d-flex align-items-center pt-4 py-5">
-        <div class="container">
+        <div  id = "contact-title" class="container">
             <div class="text-center ">
                     <small class="d-inline-block fw-bold text-uppercase mt-4 mb-3 text-dark">GET IN TOUCH</small>
                     <h1 class="display-5 mb-3 text-dark">Contact Me</h1>
@@ -38,7 +38,7 @@ app.component('contact-form', {
                                     <i class="fab fa-linkedin fa-2x  mt-3 me-4"></i>
                                     <div class="hide-text-small">
                                         <h4>LinkedIn</h4>
-                                        <a href="https://www.linkedin.com/mynetwork/" target="_blank" class="text-dark">Claire</a>
+                                        <a href="https://www.linkedin.com/in/claire-w-b05712193/" target="_blank" class="text-dark">Claire</a>
                                     </div>
                                 </div>
                             </div> 
