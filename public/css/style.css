@@ -8,6 +8,10 @@
   animation: Gradient 15s ease infinite;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 .work-item img {
   cursor: pointer;
 }

@@ -9,18 +9,7 @@ const app = Vue.createApp({
                 { text: 'RESUME', anchor: '/portfolio/resume.html' },
                 { text: 'CONTACT', anchor: './index.html#contact' }
 			],
-			contents: [
-				{ title: 'Full-Stack Development', 
-					content: 'Development of custom web pages. \nUsing current technologies and libraries of the labor field. \n\nMaster Modern Web Technologies: \nContinuously improve my proficiency in current frameworks and libraries, like React, Vue, and Angular.' 
-				},
-        		{ title: 'Graphic Design', 
-					content: 'design of web interfaces and mobile applications, \ndesign made in figma, adobe xd and sketch. \n\nI intend to work on at least three significant side projects or contribute to open-source projects relevant to full-stack development.'
-				},
-        		{ title: 'UI/UX Design', 
-					content: "I make designs at the client's request, banner design, posters, digital designs among others." 
-				}
-
-			],
+			
 			isSticky: false,
 			collapseStates: Array(3).fill(false)
 		  };
@@ -61,22 +50,22 @@ function updateProgressBars(progressValues) {
 	
 	let sharedObserverOptions = {
 		root: null,
-		threshold: 0.7, //common 10%
+		threshold: 0.5, //common 10%
 	};
 
 	let projectObserverOptions = {
 		root: null,
-		threshold: 0.7, // 70% for project card
+		threshold: 0.1, // 70% for project card
 	};  
 
 
 	let sharedObserverCallback = (entries, observer) => {
 	  entries.forEach(entry => {
 		if (entry.isIntersecting) {
-		 
+
+		  entry.target.style.opacity = 1;
 		  entry.target.classList.add('animate__animated');
 		  
-		 
 		  if (entry.target.id === 'skills-title') {
 			entry.target.classList.add('animate__bounce');
 		  } else if (entry.target.id === 'skills-left') {
@@ -95,6 +84,8 @@ function updateProgressBars(progressValues) {
 	let projectObserverCallback = (entries, observer) => {
 		entries.forEach(entry => {
 		  if (entry.isIntersecting) {
+
+			entry.target.style.opacity = 1;
 			entry.target.classList.add('animate__animated', 'animate__fadeInUp');
 
 		  if (entry.target.id ==='projects-title') {

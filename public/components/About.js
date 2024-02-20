@@ -17,12 +17,8 @@ app.component('about-section', {
                         <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target= "_blank" href="https://www.linkedin.com/in/claire-w-b05712193/"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-                <div class="fun-mouse col-lg-5 mx-auto" id="about-image">
-                    
-                        <img style="height:500px; width:auto" src="./public/img/photo.png">
- 
-
-                    
+                <div class="fun-mouse col-lg-5 mx-auto hidden" id="about-image">
+                        <img style="height:500px; width:auto" src="./public/img/photo.png">         
                 </div>
             </div>
         </div>
