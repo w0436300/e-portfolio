@@ -8,10 +8,10 @@ async function Game(){
     // function to determine the color based on the current state
     function getColorFromState(state) {
         switch (state) {
-            case 0: return '#bab6b6'; // Empty (State 0)
-            case 1: return '#5973bf';  // State 1
+            case 0: return '#e47298'; // Empty (State 0)
+            case 1: return '#209e31';  // State 1
             case 2: return 'white';  // State 2
-            default: return '#bab6b6';
+            default: return '#e47298';
         }
     }
 
@@ -29,13 +29,16 @@ async function Game(){
     }
     gridHTML += "</table>";
 
+    gridHTML += `<div style="margin-top: 10px;"><button id="refreshGameButton">Random 6*6  12*12  18*18</button></div>`;
     gridHTML += `<button id="checkPuzzleButton">Check Puzzle</button>`
     gridHTML += `<div id="puzzleStatus"></div>`;
     gridHTML += `<input type="checkbox" id="showIncorrect" /> Show Incorrect Squares<br>`;
     gridHTML += `
     <p id="demo">0</p>
     <button id="start" onclick="myStartFunction()">Start time</button>
-    <button id="stop" onclick="myStopFunction()">Stop time</button>`
+    <button id="stop" onclick="myStopFunction()">Stop time</button>
+    
+`
 
     document.getElementById('theGame').innerHTML = gridHTML;
     
@@ -138,6 +141,11 @@ async function Game(){
     }
     document.getElementById('stop').onclick = myStopFunction; 
     document.getElementById('start').onclick = myStartFunction; 
+
+    document.getElementById('refreshGameButton').addEventListener('click', function() {
+        window.location.reload();
+    });
+    
 }
 
 Game();

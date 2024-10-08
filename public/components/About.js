@@ -2,27 +2,26 @@ app.component('about-section', {
 
     template: `
     <div id="about" class="container-fluid bg-light py-6 my-6 mt-0 vh-100 d-flex align-items-center">
-
-        <div class="container ">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-7 mx-auto d-flex flex-column justify-content-center">
-                    <h1 class="display-1 mb-4">I'm <span class="text-primary custom-primary"></span></h1>
-                    <div class="col-lg-7 text-secondary d-flex flex-column justify-content-left" >
-                        <h4>
-                        <span class="typed-text"></span></h4>
-                    </div>
+                <div class="col-12 mx-auto position-relative">
                     
-                    <div class="social-links-container icon">
-                        <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target= "_blank" href="https://github.com/w0436300"><i class="fab fa-github"></i></a>
-                        <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target= "_blank" href="https://www.linkedin.com/in/claire-w-b05712193/"><i class="fab fa-linkedin"></i></a>
+                    <div class="text-on-image">
+                        <img class="img-fluid personal-photo" style="width:auto; height:500px;" src="./public/img/photo.png" alt="Photo">
+                        <div class="overlay-content text-start">
+                            <h1 class="display-1 mb-4">I'm <span class="text-primary custom-primary"></span></h1>
+                            <h4><span class="typed-text"></span></h4>
+                            <div class="social-links-container icon">
+                                <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target="_blank" href="https://github.com/w0436300"><i class="fab fa-github"></i></a>
+                                <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target="_blank" href="https://www.linkedin.com/in/claire-w-b05712193/"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="fun-mouse col-lg-5 mx-auto hidden" id="about-image">
-                        <img style="height:500px; width:auto" src="./public/img/photo.png">         
                 </div>
             </div>
         </div>
-    </div>
+     </div>
+
     `,
     data() {
         return {
@@ -31,7 +30,7 @@ app.component('about-section', {
     },
     mounted() {
         new Typed('.text-primary', {
-            strings: ["Claire", "a Developer", "a Designer"],
+            strings: ["Claire","Xinping", "a Developer", "a Designer"],
             typeSpeed: 70,
             backSpeed: 50,
             loop: true,

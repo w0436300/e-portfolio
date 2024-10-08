@@ -1,6 +1,10 @@
 #theGame {
     text-align: center; 
-    margin-top: 20px; 
+    margin-top: 50px; 
+}
+
+h1 {
+    text-align: center;
 }
 
 #theGame table {
@@ -22,3 +26,18 @@ td {
     color: rgb(217, 255, 0);
 }
 
+#checkPuzzleButton, #start, #stop {
+    margin-top: 10px;
+    background-color: rgb(210, 210, 248);
+}
+
+input {
+    font-size: large;
+}
+
+#refreshGameButton {
+    color: rgb(241, 148, 213);
+    font-size: medium;
+    font-weight: 100;
+    background-color: rgb(131, 251, 107);
+}
