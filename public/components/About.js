@@ -30,7 +30,7 @@ app.component('about-section', {
     },
     mounted() {
         new Typed('.text-primary', {
-            strings: ["Claire","Xinping", "a Developer", "a Designer"],
+            strings: ["Xinping", "a Developer", "a Designer", "an Archer","a photographer"],
             typeSpeed: 70,
             backSpeed: 50,
             loop: true,

@@ -53,7 +53,7 @@
         <div class="social-links-container d-flex flex-row">
           <a class="share-link btn rounded-circle mb-2 me-2" href="https://github.com/w0436300" target="_blank"><i
               class="fab fa-github"></i></a>
-          <a class="share-link btn rounded-circle mb-2 me-2" href="https://www.linkedin.com/in/claire-w-b05712193/"
+          <a class="share-link btn rounded-circle mb-2 me-2" href="https://www.linkedin.com/in/xinping-w/"
             target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
 
@@ -211,19 +211,96 @@
           </small>
           <h1 class=" mb-5">My Projects</h1>
         </div>
-
-
       </div>
-
+    
       <div>
-
-
         <div class="album py-5 bg-light">
           <div class="container">
-            <div class="row">
+             <!-- category button -->
+            <div class="category-buttons mb-4">
+              <button class="btn category-btn active" data-filter="fullstack">Full Stack</button>
+              <button class="btn category-btn" data-filter="design">Design</button>
+            </div>
+            <div class="row">  
               
+               <!-- 1. Analytics Dashboard -->
+               <div class="col-md-4 project-card hidden" data-category="fullstack">
+                <div class="card mb-4 box-shadow project-img">
+                  <a href="https://github.com/w0436300/dashboard" target="_blank">
+                    <img class="card-img-top"
+                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
+                      src="/public/img/dashboard2.png" data-holder-rendered="true" />
+                  </a>
+
+                  <div class="card-body">
+                    <h5 class="project-title">Analytics Dashboard</h5>
+                    <p class="custom-primary" class="card-text">Frontend: React</p>
+                    <p class="custom-primary" class="card-text">Backend: Express</p>
+                    <p class="custom-primary" class="card-text">Database: MongoDB</p>
+
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex justify-content-end "> 
+                      <a class='link-style' href="https://github.com/w0436300/dashboard.git"
+                        target="_blank">Source Code</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+               <!-- 2. weather -->
+               <div class="col-md-4 project-card hidden" data-category="fullstack">
+                <div class="card mb-4 box-shadow project-img">
+                  <a href="./public/projects/Weather-Api/index.html" target="_blank">
+                    <img class="card-img-top"
+                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
+                      src="/public/img/weather.png" data-holder-rendered="true" />
+                  </a>
+
+                  <div class="card-body">
+                    <h5 class="project-title">Weather App </h5>
+                    <p class="card-text">This weather app provides current weather details by city, dynamically updates
+                      the user interface based on weather conditions.</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <a class='link-style' href="./public/projects/Weather-Api/index.html"
+                        target="_blank">Demo</a>
+                      <a class='link-style' href="https://github.com/w0436300/Weather-Api.git"
+                        target="_blank">Source Code</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+               <!-- 3. React Native Application -->
+               <div class="col-md-4 project-card hidden" data-category="fullstack">
+                <div class="card mb-4 box-shadow project-img">
+                  <a href="https://github.com/w0436300/ReactNativeApp.git" target="_blank">
+                    <img class="card-img-top"
+                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
+                      src="/public/img/reactNative.png" data-holder-rendered="true" />
+                  </a>
+
+                  <div class="card-body">
+                    <h5 class="project-title">React Native Application</h5>
+                    <p class="custom-primary" class="card-text">React Native</p>
+
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex justify-content-end "> 
+                      <a class='link-style' href="https://github.com/w0436300/ReactNativeApp.git"
+                        target="_blank">Source Code</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- 1. bustracker -->
-              <div class="col-md-4 project-card hidden">
+              <div class="col-md-4 project-card hidden" data-category="fullstack">
                 <div class="card mb-4 box-shadow project-img">
                   <a href="./public/projects/Halifax-BusTracker/index.html" target="_blank">
                     <img class="card-img-top"
@@ -253,89 +330,9 @@
                 </div>
               </div>
 
-              <!-- 2. mernstack -->
-              <div class="col-md-4 project-card hidden project-img">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="https://github.com/w0436300/CameraMaster.git" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="public/img/cameraMaster.png" data-holder-rendered="true">
-                  </a>
-
-                  <div class="card-body">
-                    <h5 class="project-title">MERN stack web application </h5>
-                    <p class="card-text ">The Camera Master Store is a dynamic camera store website that enhances user
-                      experience in discovering, searching, and managing camera information<br />
-                    </p>
-                    <p class="custom-primary">Technologies:<br />
-                      Node.js and Express.js<br />
-                      MongoDB with Mongoose<br />
-                      React.js<br />
-                     </p>
-
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-end ">
-                      <a class='link-style' href="https://github.com/w0436300/CameraMaster.git"
-                        target="_blank">Source Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 3. weather -->
-              <div class="col-md-4 project-card hidden">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="./public/projects/Weather-Api/index.html" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="/public/img/weather.png" data-holder-rendered="true" />
-                  </a>
-
-                  <div class="card-body">
-                    <h5 class="project-title">Weather App </h5>
-                    <p class="card-text">This weather app provides current weather details by city, dynamically updates
-                      the user interface based on weather conditions.</p>
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <a class='link-style' href="./public/projects/Weather-Api/index.html"
-                        target="_blank">Demo</a>
-                      <a class='link-style' href="https://github.com/w0436300/Weather-Api.git"
-                        target="_blank">Source Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- 4. 3inrow -->
-              <div class="col-md-4 project-card hidden">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="./public/projects/project1/index.html" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="/public/img/3inarow.png" data-holder-rendered="true" />
-                  </a>
-
-                  <div class="card-body">
-                    <h5 class="project-title">Three in a Row Game </h5>
-                    <p class="custom-primary" class="card-text">Frontend: HTML, CSS, JavaScript</p>
-                    <p class="custom-primary" class="card-text">Fetch API</p>
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <a class='link-style' href="./public/projects/project1/index.html"
-                        target="_blank">Demo</a>
-                      <a class='link-style' href="https://github.com/w0436300/three-in-a-row-with-Testing-Strategy.git"
-                        target="_blank">Source Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          
               <!-- 5. E-commerce -->
-              <div class="col-md-4 project-card hidden">
+              <div class="col-md-4 project-card hidden" data-category="fullstack">
                 <div class="card mb-4 box-shadow project-img">
                   <a href="https://github.com/w0436300/E-commerce" target="_blank">
                     <img class="card-img-top"
@@ -359,7 +356,7 @@
               </div>
 
               <!-- 6. Koii website -->
-              <div class="col-md-4 project-card hidden">
+              <div class="col-md-4 project-card hidden" data-category="fullstack">
                 <div class="card mb-4 box-shadow project-img">
                   <a href="https://github.com/w0436300/E-commerce" target="_blank">
                     <img class="card-img-top"
@@ -384,31 +381,7 @@
                 </div>
               </div>
 
-              <!-- 7. Analytics Dashboard -->
-              <div class="col-md-4 project-card hidden">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="https://github.com/w0436300/E-commerce" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="/public/img/dashboard2.png" data-holder-rendered="true" />
-                  </a>
-
-                  <div class="card-body">
-                    <h5 class="project-title">Analytics Dashboard</h5>
-                    <p class="custom-primary" class="card-text">Frontend: React</p>
-                    <p class="custom-primary" class="card-text">Backend: Express</p>
-                    <p class="custom-primary" class="card-text">Database: MongoDB</p>
-
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-end "> 
-                      <a class='link-style' href="https://github.com/w0436300/dashboard.git"
-                        target="_blank">Source Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+             
 
               <!-- 7. Tak Middleman -->
               <!-- <div class="col-md-4 project-card hidden">
@@ -436,7 +409,7 @@
               </div> -->
 
                <!-- 11.  Albums app -->
-               <div class="col-md-4 project-card hidden">
+               <div class="col-md-4 project-card hidden" data-category="fullstack">
                 <div class="card mb-4 box-shadow project-img">
                   <a href="https://github.com/w0436300/E-commerce" target="_blank">
                     <img class="card-img-top"
@@ -459,33 +432,9 @@
                 </div>
               </div>
 
-
-              <!-- 8. React Native Application -->
-              <div class="col-md-4 project-card hidden">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="https://github.com/w0436300/ReactNativeApp.git" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="/public/img/reactNative.png" data-holder-rendered="true" />
-                  </a>
-
-                  <div class="card-body">
-                    <h5 class="project-title">React Native Application</h5>
-                    <p class="custom-primary" class="card-text">React Native</p>
-
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-end "> 
-                      <a class='link-style' href="https://github.com/w0436300/ReactNativeApp.git"
-                        target="_blank">Source Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+           
               <!-- 9.  Electron-video-player-converter-application- -->
-              <div class="col-md-4 project-card hidden">
+              <div class="col-md-4 project-card hidden" data-category="fullstack">
                 <div class="card mb-4 box-shadow project-img">
                   <a href="https://github.com/w0436300/E-commerce" target="_blank">
                     <img class="card-img-top"
@@ -509,7 +458,7 @@
               </div>
 
               <!-- 10.  SocketIO -->
-              <div class="col-md-4 project-card hidden">
+              <div class="col-md-4 project-card hidden" data-category="fullstack">
                 <div class="card mb-4 box-shadow project-img">
                   <a href="https://github.com/w0436300/E-commerce" target="_blank">
                     <img class="card-img-top"
@@ -531,9 +480,232 @@
                   </div>
                 </div>
               </div>
-
+            
              
-              
+              <!-- 4. 3inrow -->
+              <div class="col-md-4 project-card hidden" data-category="fullstack">
+                <div class="card mb-4 box-shadow project-img">
+                  <a href="./public/projects/project1/index.html" target="_blank">
+                    <img class="card-img-top"
+                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
+                      src="/public/img/3inarow.png" data-holder-rendered="true" />
+                  </a>
+
+                  <div class="card-body">
+                    <h5 class="project-title">Three in a Row Game </h5>
+                    <p class="custom-primary" class="card-text">Frontend: HTML, CSS, JavaScript</p>
+                    <p class="custom-primary" class="card-text">Fetch API</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <a class='link-style' href="./public/projects/project1/index.html"
+                        target="_blank">Demo</a>
+                      <a class='link-style' href="https://github.com/w0436300/three-in-a-row-with-Testing-Strategy.git"
+                        target="_blank">Source Code</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                  <!-- 2. mernstack -->
+                  <div class="col-md-4 project-card hidden project-img" data-category="fullstack">
+                    <div class="card mb-4 box-shadow project-img">
+                      <a href="https://github.com/w0436300/CameraMaster.git" target="_blank">
+                        <img class="card-img-top"
+                          data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                          alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
+                          src="public/img/cameraMaster.png" data-holder-rendered="true">
+                      </a>
+    
+                      <div class="card-body">
+                        <h5 class="project-title">MERN stack web application </h5>
+                        <p class="card-text ">The Camera Master Store is a dynamic camera store website that enhances user
+                          experience in discovering, searching, and managing camera information<br />
+                        </p>
+                        <p class="custom-primary">Technologies:<br />
+                          Node.js and Express.js<br />
+                          MongoDB with Mongoose<br />
+                          React.js<br />
+                         </p>
+    
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-flex justify-content-end ">
+                          <a class='link-style' href="https://github.com/w0436300/CameraMaster.git"
+                            target="_blank">Source Code</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            <!-- design -->
+             <!-- 0.0. design -->
+             <div class="col-md-4 project-card hidden" data-category="design">
+              <div class="card mb-4 box-shadow project-img"
+              data-title="Analytics Dashboard"
+              data-description="dashboard"
+              data-image="/public/img/design-dashboard.png"
+              data-tech="Adobe"
+            >
+            
+
+                <a href="https://github.com/w0436300/E-commerce" target="_blank">
+                  <img class="card-img-top"
+                    data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                    alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
+                    src="/public/img/dashboard2.png" data-holder-rendered="true" />
+                </a>
+
+                <div class="card-body">
+                  <h5 class="project-title">Analytics Dashboard</h5>
+                  <p class="custom-primary" class="card-text">Figma</p>
+                  <p class="custom-primary" class="card-text">React</p>
+                  <p class="custom-primary" class="card-text">Backend: Express</p>
+                  <p class="custom-primary" class="card-text">Database: MongoDB</p>
+
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-end "> 
+                    <a class='link-style' href="https://github.com/w0436300/dashboard.git"
+                      target="_blank">Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+             <!-- 0.0. design -->
+             <div class="col-md-4 project-card hidden" data-category="design">
+              <div class="card mb-4 box-shadow project-img"
+              data-title="The concept of Sign Design"
+              data-description="Hospital"
+              data-image="/public/img/hospital0-0.png"
+              data-tech="Adobe"
+            >
+            
+
+                <a href="https://github.com/w0436300/E-commerce" target="_blank">
+                  <img class="card-img-top"
+                    data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                    alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
+                    src="/public/img/hospital.png" data-holder-rendered="true" />
+                </a>
+
+                <div class="card-body">
+                  <h5 class="project-title">The concept of Sign Design</h5>
+                  <p class="custom-primary" class="card-text">Adobe cc</p>
+                  <!-- <p class="custom-primary" class="card-text">Backend: Express</p>
+                  <p class="custom-primary" class="card-text">Database: MongoDB</p> -->
+
+                </div>
+                <div class="card-footer">
+                  <!-- <div class="d-flex justify-content-end "> 
+                    <a class='link-style' href="https://github.com/w0436300/dashboard.git"
+                      target="_blank">Source Code</a>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+             <!-- 1.1. design -->
+             <div class="col-md-4 project-card hidden" data-category="design">
+              <div class="card mb-4 box-shadow project-img"
+              data-title="Packaging Design"
+              data-description="Sound in the sea"
+              data-image="/public/img/design1.png"
+              data-tech="Adobe"
+            >
+            
+
+                <a href="https://github.com/w0436300/E-commerce" target="_blank">
+                  <img class="card-img-top"
+                    data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                    alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
+                    src="/public/img/design1-1.png" data-holder-rendered="true" />
+                </a>
+
+                <div class="card-body">
+                  <h5 class="project-title">Packaging Design</h5>
+                  <p class="custom-primary" class="card-text">Adobe cc</p>
+                  <!-- <p class="custom-primary" class="card-text">Backend: Express</p>
+                  <p class="custom-primary" class="card-text">Database: MongoDB</p> -->
+
+                </div>
+                <div class="card-footer">
+                  <!-- <div class="d-flex justify-content-end "> 
+                    <a class='link-style' href="https://github.com/w0436300/dashboard.git"
+                      target="_blank">Source Code</a>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+             <!-- 2.2. design -->
+             <div class="col-md-4 project-card hidden" data-category="design">
+              <div class="card mb-4 box-shadow project-img"
+              data-title="Logo Design"
+              data-description="Ice Festivel"
+              data-image="/public/img/design2.png"
+              data-tech="Adobe"
+            >
+            
+
+                <a href="https://github.com/w0436300/E-commerce" target="_blank">
+                  <img class="card-img-top"
+                    data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                    alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
+                    src="/public/img/design2-2.png" data-holder-rendered="true" />
+                </a>
+
+                <div class="card-body">
+                  <h5 class="project-title">Logo Design</h5>
+                  <p class="custom-primary" class="card-text">Adobe cc</p>
+                  <!-- <p class="custom-primary" class="card-text">Backend: Express</p>
+                  <p class="custom-primary" class="card-text">Database: MongoDB</p> -->
+
+                </div>
+                <div class="card-footer">
+                  <!-- <div class="d-flex justify-content-end "> 
+                    <a class='link-style' href="https://github.com/w0436300/dashboard.git"
+                      target="_blank">Source Code</a>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+             <!-- 3.3. design -->
+             <div class="col-md-4 project-card hidden" data-category="design">
+              <div class="card mb-4 box-shadow project-img"
+              data-title="Book Design"
+              data-description="Wedding"
+              data-image="/public/img/wedding.png"
+              data-tech="Adobe"
+            >
+            
+
+                <a href="https://github.com/w0436300/E-commerce" target="_blank">
+                  <img class="card-img-top"
+                    data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                    alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
+                    src="/public/img/design3-3.png" data-holder-rendered="true" />
+                </a>
+
+                <div class="card-body">
+                  <h5 class="project-title">Book Design</h5>
+                  <p class="custom-primary" class="card-text">Adobe cc</p>
+                  <!-- <p class="custom-primary" class="card-text">Backend: Express</p>
+                  <p class="custom-primary" class="card-text">Database: MongoDB</p> -->
+
+                </div>
+                <div class="card-footer">
+                  <!-- <div class="d-flex justify-content-end "> 
+                    <a class='link-style' href="https://github.com/w0436300/dashboard.git"
+                      target="_blank">Source Code</a>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+           
+
 
             </div>
           </div>
@@ -561,7 +733,7 @@
           <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target="_blank"
             href="https://github.com/w0436300"><i class="fab fa-github"></i></a>
           <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target="_blank"
-            href="https://www.linkedin.com/in/claire-w-b05712193/"><i class="fab fa-linkedin"></i></a>
+            href="https://www.linkedin.com/in/xinping-w/"><i class="fab fa-linkedin"></i></a>
         </div>
 
       </div>
@@ -569,8 +741,51 @@
 
     <!-- contact end-->
 
-    <!-- Footer Start -->
+    <!-- Loading Modal -->
+<div class="modal fade" id="loadingModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body text-center text-white">
+        <div class="spinner-border text-light mb-3" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mb-0">Loading project details...</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="projectModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-8">
+            <img id="modalImage" src="" alt="Project Image" class="img-fluid rounded">
+          </div>
+          <div class="col-md-4">
+            <h4 id="modalTitle" class="mb-3"></h4>
+            <div id="modalDescription" class="mb-3"></div>
+            <div id="modalTech" class="mb-3">
+              <h5>Technologies:</h5>
+              <ul class="list-unstyled"></ul>
+            </div>
+            <div id="modalLinks" class="d-flex gap-2">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+
+
+    <!-- Footer Start -->
     <footer class="text-center custom-footer">
       <div class="container p-1">
         <div class="row">
