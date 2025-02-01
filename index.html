@@ -1,390 +1,609 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
-<head>
-  <!--
+  <head>
+    <!--
         Title: resume
         Author: Xinping Wang
     -->
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Home</title>
-  <meta name="author" content="Xinping Wang" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Home</title>
+    <meta name="author" content="Xinping Wang" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <link rel="stylesheet" href="./public/css/style.css" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <!--typed.js-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!--jquery.js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
 
+  <body>
+    <div id="app" class="bg-light custom-bg">
+      <!-- nav Start -->
+      <nav
+        class="navbar navbar-expand-lg sticky-top"
+        :class="{ 'is-sticky': isSticky }"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <h4>Claire</h4>
+          </a>
 
-  <link rel="stylesheet" href="./public/css/style.css">
-
-  <!-- Import Vue.js -->
-  <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
-  <!--typed.js-->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <!--jquery.js-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-
-
-</head>
-
-<body>
-
-  <div id="app" class="bg-light custom-bg">
-    <!-- nav Start -->
-    <nav class=" navbar navbar-expand-lg sticky-top " :class="{ 'is-sticky': isSticky }">
-      <div class="container-fluid  ">
-        <a class="navbar-brand" href="index.html">
-          <h4>Claire</h4>
-        </a>
-
-        <div class="social-links-container d-flex flex-row">
-          <a class="share-link btn rounded-circle mb-2 me-2" href="https://github.com/w0436300" target="_blank"><i
-              class="fab fa-github"></i></a>
-          <a class="share-link btn rounded-circle mb-2 me-2" href="https://www.linkedin.com/in/xinping-w/"
-            target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-
-        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
-          aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="navbar-nav ms-auto align-items-center mb-2 mb-lg-0 ">
-            <li class="nav-item me-4 nav-item-divider" v-for="(menu, index) in menus" :key="index">
-
-              <a class="nav-link fs-4" :href="menu.anchor">{{ menu.text }}</a>
-
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </nav>
-    <!-- nav end -->
-
-    <!-- About Start -->
-    <about-section></about-section>
-    <!-- About End -->
-
-
-    <!-- Skills Start -->
-    <div id="skills" class="container-fluid bg-light pt-5 pb-5 ">
-      <div class="container">
-        <div class="text-center">
-          <div id="skills-title" class="text-center hidden">
-            <small class="d-inline-block fw-bold text-dark text-uppercase mb-3 animate__animated animate__bounce">Skills
-              I can provides</small>
-            <h1 class=" mb-3">My Skills</h1>
+          <div class="social-links-container d-flex flex-row">
+            <a
+              class="share-link btn rounded-circle mb-2 me-2"
+              href="https://github.com/w0436300"
+              target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              class="share-link btn rounded-circle mb-2 me-2"
+              href="https://www.linkedin.com/in/xinping-w/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
           </div>
 
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#myNavbar"
+            aria-controls="myNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav ms-auto align-items-center mb-2 mb-lg-0">
+              <li
+                class="nav-item me-4 nav-item-divider"
+                v-for="(menu, index) in menus"
+                :key="index"
+              >
+                <a class="nav-link fs-4" :href="menu.anchor">{{ menu.text }}</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-md-7">
+      </nav>
+      <!-- nav end -->
 
-            <div id="skills-left" class="container-fluid hidden  ">
-              <div class="container">
-                <!-- Services Items -->
-                <div class="row">
-                  <div class="col12 service-item">
-                    <div class="icon">
-                      <i class="fa fa-magic"></i>
-                      <span></span>
+      <!-- About Start -->
+      <about-section></about-section>
+      <!-- About End -->
+
+      <!-- Skills Start -->
+      <div id="skills" class="container-fluid bg-light pt-5 pb-5">
+        <div class="container">
+          <div class="text-center">
+            <div id="skills-title" class="text-center hidden">
+              <small
+                class="d-inline-block fw-bold text-dark text-uppercase mb-3 animate__animated animate__bounce"
+                >Skills I can provides</small
+              >
+              <h1 class="mb-3">My Skills</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-7">
+              <div id="skills-left" class="container-fluid hidden">
+                <div class="container">
+                  <!-- Services Items -->
+                  <div class="row">
+                    <div class="col12 service-item">
+                      <div class="icon">
+                        <i class="fa fa-magic"></i>
+                        <span></span>
+                      </div>
+
+                      <h5 class="custom-primary">Full Stack Development</h5>
+                      <p class="text-start">
+                        I excel in both front-end and back-end technologies,
+                        leveraging JavaScript, React, Node.js, express and
+                        various databases (mySql, mongoDB)to build seamless web
+                        applications. <br />My workflow incorporates Git, Agile,
+                        Docker, and GitHub Actions, ensuring efficient
+                        development cycles.
+                      </p>
                     </div>
 
-                    <h5 class="custom-primary">Full Stack Development </h5>
-                    <p class="text-start">I excel in both front-end and back-end technologies, leveraging JavaScript,
-                      React, Node.js, express and
-                      various databases (mySql, mongoDB)to build seamless web applications. <br />My workflow
-                      incorporates
-                      Git, Agile, Docker,
-                      and GitHub Actions, ensuring efficient development cycles.</p>
-                  </div>
-
-                  <div class="col12 service-item">
-                    <div class="icon">
-                      <i class="fa fa-pen"></i>
-                      <span></span>
+                    <div class="col12 service-item">
+                      <div class="icon">
+                        <i class="fa fa-pen"></i>
+                        <span></span>
+                      </div>
+                      <h5 class="custom-primary">Design</h5>
+                      <p class="text-start">
+                        I blend technical skills with creativity in graphic
+                        design and UI/UX, aiming to contribute to projects that
+                        enhance user experiences through intuitive interfaces
+                        and compelling visuals.
+                      </p>
                     </div>
-                    <h5 class="custom-primary">Design</h5>
-                    <p class="text-start ">I blend technical skills with creativity in graphic design and UI/UX, aiming
-                      to contribute to
-                      projects that enhance user experiences through intuitive interfaces and compelling visuals.</p>
                   </div>
-
                 </div>
               </div>
             </div>
 
-          </div>
-
-
-          <div id="skills-right" class="col-md-5 d-flex align-items-center hidden">
-            <div class="w-100">
-
-              <div class="d-flex justify-content-between align-items-center">
-                <p class="flex-grow-1 text-start">Frontend</p>
-                <div class="flex-grow-1 d-flex justify-content-end gap-2 logo-size">
-                  <img class="img-fluid custom-img-size" src="/public/img/logos/react.png">
-                  <img class="img-fluid custom-img-size" src="/public/img/logos/js.png">
-                  <img class="img-fluid custom-img-size" src="/public/img/logos/bootstrap.png">
-                  <img class="img-fluid custom-img-size" src="/public/img/logos/html.png">
-                  <img class="img-fluid custom-img-size" src="/public/img/logos/vue.png">
+            <div
+              id="skills-right"
+              class="col-md-5 d-flex align-items-center hidden"
+            >
+              <div class="w-100">
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="flex-grow-1 text-start">Frontend</p>
+                  <div
+                    class="flex-grow-1 d-flex justify-content-end gap-2 logo-size"
+                  >
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/react.png"
+                    />
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/js.png"
+                    />
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/bootstrap.png"
+                    />
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/html.png"
+                    />
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/vue.png"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div class="progress mb-3">
-                <div id="progressBar1" class="progress-bar bg-info" role="progressbar" style="width: 0%"
-                  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-
-              <div class="d-flex justify-content-between align-items-center">
-                <p class="flex-grow-1 text-start">Backend</p>
-                <div class="flex-grow-1 d-flex justify-content-end gap-2 logo-size">
-                  <img class="img-fluid custom-img-size" src="/public/img/logos/nodejs.png">
-                  <img class="img-fluid custom-img-size" src="/public/img/logos/express.png">
-                  <img class="img-fluid custom-img-size" src="/public/img/logos/mongodb.png">
-                  <img class="img-fluid custom-img-size" src="/public/img/logos/mysql.png">
-
+                <div class="progress mb-3">
+                  <div
+                    id="progressBar1"
+                    class="progress-bar bg-info"
+                    role="progressbar"
+                    style="width: 0%"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
                 </div>
-              </div>
-              <div class="progress mb-3">
-                <div id="progressBar2" class="progress-bar bg-success " role="progressbar" style="width: 0%"
-                  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
 
-              <div class="d-flex justify-content-between align-items-center">
-                <p class="flex-grow-1 text-start">Design</p>
-                <div class="flex-grow-1 d-flex justify-content-end gap-2 logo-size">
-                  <img class="img-fluid  custom-img-size" src="/public/img/logos/ps.png">
-                  <img class="img-fluid  custom-img-size" src="/public/img/logos/ai.png">
-                  <img class="img-fluid  custom-img-size" src="/public/img/logos/figma.png">
-                  <img class="img-fluid  custom-img-size" src="/public/img/logos/sketch.png">
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="flex-grow-1 text-start">Backend</p>
+                  <div
+                    class="flex-grow-1 d-flex justify-content-end gap-2 logo-size"
+                  >
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/nodejs.png"
+                    />
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/express.png"
+                    />
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/mongodb.png"
+                    />
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/mysql.png"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div class="progress mb-3">
-                <div id="progressBar3" class="progress-bar bg-warning" role="progressbar" style="width: 0%"
-                  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+                <div class="progress mb-3">
+                  <div
+                    id="progressBar2"
+                    class="progress-bar bg-success"
+                    role="progressbar"
+                    style="width: 0%"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
 
-              <div class="d-flex justify-content-between align-items-center">
-                <p class="flex-grow-1 text-start">Others</p>
-                <div class="flex-grow-1 d-flex justify-content-end gap-2 logo-size">
-                  <img class="img-fluid  custom-img-size" src="/public/img/logos/jira.png">
-                  <img class="img-fluid  custom-img-size" src="/public/img/logos/git.png">
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="flex-grow-1 text-start">Design</p>
+                  <div
+                    class="flex-grow-1 d-flex justify-content-end gap-2 logo-size"
+                  >
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/ps.png"
+                    />
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/ai.png"
+                    />
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/figma.png"
+                    />
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/sketch.png"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div class="progress">
-                <div id="progressBar4" class="progress-bar bg-danger" role="progressbar" style="width: 0%"
-                  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress mb-3">
+                  <div
+                    id="progressBar3"
+                    class="progress-bar bg-warning"
+                    role="progressbar"
+                    style="width: 0%"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="flex-grow-1 text-start">Others</p>
+                  <div
+                    class="flex-grow-1 d-flex justify-content-end gap-2 logo-size"
+                  >
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/jira.png"
+                    />
+                    <img
+                      class="img-fluid custom-img-size"
+                      src="/public/img/logos/git.png"
+                    />
+                  </div>
+                </div>
+                <div class="progress">
+                  <div
+                    id="progressBar4"
+                    class="progress-bar bg-danger"
+                    role="progressbar"
+                    style="width: 0%"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <!-- Skills End -->
 
-
-
+      <!-- projects start-->
+      <div id="project" class="container-fluid mt-4">
+        <div id="projects-title" class="container hidden">
+          <div class="text-center">
+            <small class="d-inline-block fw-bold text-dark text-uppercase mb-3"
+              >My Jobs
+            </small>
+            <h1 class="mb-5">My Projects</h1>
           </div>
         </div>
 
+        <div>
+          <div class="album py-5 bg-light">
+            <div class="container">
+              <!-- category button -->
+              <div class="category-buttons mb-4">
+                <button class="btn category-btn active" data-filter="fullstack">
+                  Full Stack
+                </button>
+                <button class="btn category-btn" data-filter="design">
+                  Design
+                </button>
+              </div>
+              <div class="row">
+                <!-- 1. Analytics Dashboard -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="fullstack"
+                >
+                  <div class="card mb-4 box-shadow project-img">
+                    <a
+                      href="https://github.com/w0436300/dashboard"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/dashboard2.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
 
-      </div>
-    </div>
-    <!-- Skills End -->
-
-
-    <!-- projects start-->
-    <div id="project" class="container-fluid mt-4 ">
-      <div id="projects-title" class="container hidden">
-        <div class="text-center">
-          <small class="d-inline-block fw-bold text-dark text-uppercase mb-3">My Jobs
-          </small>
-          <h1 class=" mb-5">My Projects</h1>
-        </div>
-      </div>
-    
-      <div>
-        <div class="album py-5 bg-light">
-          <div class="container">
-             <!-- category button -->
-            <div class="category-buttons mb-4">
-              <button class="btn category-btn active" data-filter="fullstack">Full Stack</button>
-              <button class="btn category-btn" data-filter="design">Design</button>
-            </div>
-            <div class="row">  
-              
-               <!-- 1. Analytics Dashboard -->
-               <div class="col-md-4 project-card hidden" data-category="fullstack">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="https://github.com/w0436300/dashboard" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="/public/img/dashboard2.png" data-holder-rendered="true" />
-                  </a>
-
-                  <div class="card-body">
-                    <h5 class="project-title">Analytics Dashboard</h5>
-                    <p class="custom-primary" class="card-text">Frontend: React</p>
-                    <p class="custom-primary" class="card-text">Backend: Express</p>
-                    <p class="custom-primary" class="card-text">Database: MongoDB</p>
-
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-end "> 
-                      <a class='link-style' href="https://github.com/w0436300/dashboard.git"
-                        target="_blank">Source Code</a>
+                    <div class="card-body">
+                      <h5 class="project-title">Analytics Dashboard</h5>
+                      <p class="custom-primary" class="card-text">
+                        Frontend: React
+                      </p>
+                      <p class="custom-primary" class="card-text">
+                        Backend: Express
+                      </p>
+                      <p class="custom-primary" class="card-text">
+                        Database: MongoDB
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-end">
+                        <a
+                          class="link-style"
+                          href="https://github.com/w0436300/dashboard.git"
+                          target="_blank"
+                          >Source Code</a
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              
 
-               <!-- 2. weather -->
-               <div class="col-md-4 project-card hidden" data-category="fullstack">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="./public/projects/Weather-Api/index.html" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="/public/img/weather.png" data-holder-rendered="true" />
-                  </a>
+                <!-- 2. weather -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="fullstack"
+                >
+                  <div class="card mb-4 box-shadow project-img">
+                    <a
+                      href="./public/projects/Weather-Api/index.html"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/weather.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
 
-                  <div class="card-body">
-                    <h5 class="project-title">Weather App </h5>
-                    <p class="card-text">This weather app provides current weather details by city, dynamically updates
-                      the user interface based on weather conditions.</p>
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <a class='link-style' href="./public/projects/Weather-Api/index.html"
-                        target="_blank">Demo</a>
-                      <a class='link-style' href="https://github.com/w0436300/Weather-Api.git"
-                        target="_blank">Source Code</a>
+                    <div class="card-body">
+                      <h5 class="project-title">Weather App</h5>
+                      <p class="card-text">
+                        This weather app provides current weather details by
+                        city, dynamically updates the user interface based on
+                        weather conditions.
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <a
+                          class="link-style"
+                          href="./public/projects/Weather-Api/index.html"
+                          target="_blank"
+                          >Demo</a
+                        >
+                        <a
+                          class="link-style"
+                          href="https://github.com/w0436300/Weather-Api.git"
+                          target="_blank"
+                          >Source Code</a
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-               <!-- 3. React Native Application -->
-               <div class="col-md-4 project-card hidden" data-category="fullstack">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="https://github.com/w0436300/ReactNativeApp.git" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="/public/img/reactNative.png" data-holder-rendered="true" />
-                  </a>
+                <!-- 3. React Native Application -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="fullstack"
+                >
+                  <div class="card mb-4 box-shadow project-img">
+                    <a
+                      href="https://github.com/w0436300/ReactNativeApp.git"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/reactNative.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
 
-                  <div class="card-body">
-                    <h5 class="project-title">React Native Application</h5>
-                    <p class="custom-primary" class="card-text">React Native</p>
-
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-end "> 
-                      <a class='link-style' href="https://github.com/w0436300/ReactNativeApp.git"
-                        target="_blank">Source Code</a>
+                    <div class="card-body">
+                      <h5 class="project-title">React Native Application</h5>
+                      <p class="custom-primary" class="card-text">
+                        React Native
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-end">
+                        <a
+                          class="link-style"
+                          href="https://github.com/w0436300/ReactNativeApp.git"
+                          target="_blank"
+                          >Source Code</a
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- 1. bustracker -->
-              <div class="col-md-4 project-card hidden" data-category="fullstack">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="./public/projects/Halifax-BusTracker/index.html" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="public/img/busTracker.png" data-holder-rendered="true" />
-                  </a>
+                <!-- 1. bustracker -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="fullstack"
+                >
+                  <div class="card mb-4 box-shadow project-img">
+                    <a
+                      href="./public/projects/Halifax-BusTracker/index.html"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="public/img/busTracker.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
 
-                  <div class="card-body">
-                    <h5 class="project-title">Halifax BusTracker </h5>
-                    <p class="card-text ">This bus tracker app provides real-time updates on bus locations using
-                      Leaflet.js, asynchronous JavaScript (fetch API).<br />
-                    </p>
-                    <p class="custom-primary">Technologies:<br />
-                      Leaflet.js for interactive maps<br />
-                      GeoJSON for spatial data representation</p>
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <a class='link-style' href="./public/projects/Halifax-BusTracker/index.html"
-                        target="_blank">Demo</a>
-                      <a class='link-style' href="https://github.com/w0436300/Halifax-Bus-Tracker.git"
-                        target="_blank">Source Code</a>
+                    <div class="card-body">
+                      <h5 class="project-title">Halifax BusTracker</h5>
+                      <p class="card-text">
+                        This bus tracker app provides real-time updates on bus
+                        locations using Leaflet.js, asynchronous JavaScript
+                        (fetch API).<br />
+                      </p>
+                      <p class="custom-primary">
+                        Technologies:<br />
+                        Leaflet.js for interactive maps<br />
+                        GeoJSON for spatial data representation
+                      </p>
                     </div>
-                  </div>
-
-                </div>
-              </div>
-
-          
-              <!-- 5. E-commerce -->
-              <div class="col-md-4 project-card hidden" data-category="fullstack">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="https://github.com/w0436300/E-commerce" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="/public/img/e-store.png" data-holder-rendered="true" />
-                  </a>
-
-                  <div class="card-body">
-                    <h5 class="project-title">E- commerce </h5>
-                    <p class="custom-primary" class="card-text">Frontend: Next.js</p>
-                    <p class="custom-primary" class="card-text">Database: MongoDB</p>
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-end "> 
-                      <a class='link-style' href="https://github.com/w0436300/E-commerce"
-                        target="_blank">Source Code</a>
+                    <div class="card-footer">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <a
+                          class="link-style"
+                          href="./public/projects/Halifax-BusTracker/index.html"
+                          target="_blank"
+                          >Demo</a
+                        >
+                        <a
+                          class="link-style"
+                          href="https://github.com/w0436300/Halifax-Bus-Tracker.git"
+                          target="_blank"
+                          >Source Code</a
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- 6. Koii website -->
-              <div class="col-md-4 project-card hidden" data-category="fullstack">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="https://github.com/w0436300/E-commerce" target="_blank">
-                    <img class="card-img-top"
-                        style="max-height: 500px; max-width: 100%; object-fit: contain; display: inline-block;"
+                <!-- 5. E-commerce -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="fullstack"
+                >
+                  <div class="card mb-4 box-shadow project-img">
+                    <a
+                      href="https://github.com/w0436300/E-commerce"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/e-store.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
+
+                    <div class="card-body">
+                      <h5 class="project-title">E- commerce</h5>
+                      <p class="custom-primary" class="card-text">
+                        Frontend: Next.js
+                      </p>
+                      <p class="custom-primary" class="card-text">
+                        Database: MongoDB
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-end">
+                        <a
+                          class="link-style"
+                          href="https://github.com/w0436300/E-commerce"
+                          target="_blank"
+                          >Source Code</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 6. Koii website -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="fullstack"
+                >
+                  <div class="card mb-4 box-shadow project-img">
+                    <a
+                      href="https://github.com/w0436300/E-commerce"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        style="
+                          max-height: 500px;
+                          max-width: 100%;
+                          object-fit: contain;
+                          display: inline-block;
+                        "
                         alt="Thumbnail"
-                        src="/public/img/koii-website.png" />
-                </a>
+                        src="/public/img/koii-website.png"
+                      />
+                    </a>
 
-                  <div class="card-body">
-                    <h5 class="project-title">KOII Website </h5>
-                    <p class="custom-primary" class="card-text">Frontend: React</p>
-                    <p class="custom-primary" class="card-text"></p>
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <a class='link-style' href="https://www.koii.network/ecosystem"
-                        target="_blank">Link</a>
-                      <a class='link-style'
-                        target="_blank"></a>
+                    <div class="card-body">
+                      <h5 class="project-title">KOII Website</h5>
+                      <p class="custom-primary" class="card-text">
+                        Frontend: React
+                      </p>
+                      <p class="custom-primary" class="card-text"></p>
+                    </div>
+                    <div class="card-footer">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <a
+                          class="link-style"
+                          href="https://www.koii.network/ecosystem"
+                          target="_blank"
+                          >Link</a
+                        >
+                        <a class="link-style" target="_blank"></a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-             
-
-              <!-- 7. Tak Middleman -->
-              <!-- <div class="col-md-4 project-card hidden">
+                <!-- 7. Tak Middleman -->
+                <!-- <div class="col-md-4 project-card hidden">
                 <div class="card mb-4 box-shadow project-img">
                   <a href="https://github.com/w0436300/E-commerce" target="_blank">
                     <img class="card-img-top"
@@ -408,418 +627,602 @@
                 </div>
               </div> -->
 
-               <!-- 11.  Albums app -->
-               <div class="col-md-4 project-card hidden" data-category="fullstack">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="https://github.com/w0436300/E-commerce" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="/public/img/music.png" data-holder-rendered="true" />
-                  </a>
+                <!-- 11.  Albums app -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="fullstack"
+                >
+                  <div class="card mb-4 box-shadow project-img">
+                    <a
+                      href="https://github.com/w0436300/E-commerce"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/music.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
 
-                  <div class="card-body">
-                    <h5 class="project-title">Album management app</h5>
-                    <p class="custom-primary" class="card-text">express</p>
-
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-end "> 
-                      <a class='link-style' href="https://github.com/w0436300/Albums_express.git"
-                        target="_blank">Source Code</a>
+                    <div class="card-body">
+                      <h5 class="project-title">Album management app</h5>
+                      <p class="custom-primary" class="card-text">express</p>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-           
-              <!-- 9.  Electron-video-player-converter-application- -->
-              <div class="col-md-4 project-card hidden" data-category="fullstack">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="https://github.com/w0436300/E-commerce" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="/public/img/electron.png" data-holder-rendered="true" />
-                  </a>
-
-                  <div class="card-body">
-                    <h5 class="project-title">Video player converter application</h5>
-                    <p class="custom-primary" class="card-text">Electron</p>
-
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-end "> 
-                      <a class='link-style' href="https://github.com/w0436300/Electron-video-player-converter-application.git"
-                        target="_blank">Source Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 10.  SocketIO -->
-              <div class="col-md-4 project-card hidden" data-category="fullstack">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="https://github.com/w0436300/E-commerce" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="/public/img/chatroom.png" data-holder-rendered="true" />
-                  </a>
-
-                  <div class="card-body">
-                    <h5 class="project-title">Chatroom</h5>
-                    <p class="custom-primary" class="card-text">SocketIO</p>
-
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-end "> 
-                      <a class='link-style' href="https://github.com/w0436300/Chatroom-SocketIO.git"
-                        target="_blank">Source Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-             
-              <!-- 4. 3inrow -->
-              <div class="col-md-4 project-card hidden" data-category="fullstack">
-                <div class="card mb-4 box-shadow project-img">
-                  <a href="./public/projects/project1/index.html" target="_blank">
-                    <img class="card-img-top"
-                      data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                      alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                      src="/public/img/3inarow.png" data-holder-rendered="true" />
-                  </a>
-
-                  <div class="card-body">
-                    <h5 class="project-title">Three in a Row Game </h5>
-                    <p class="custom-primary" class="card-text">Frontend: HTML, CSS, JavaScript</p>
-                    <p class="custom-primary" class="card-text">Fetch API</p>
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <a class='link-style' href="./public/projects/project1/index.html"
-                        target="_blank">Demo</a>
-                      <a class='link-style' href="https://github.com/w0436300/three-in-a-row-with-Testing-Strategy.git"
-                        target="_blank">Source Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-                  <!-- 2. mernstack -->
-                  <div class="col-md-4 project-card hidden project-img" data-category="fullstack">
-                    <div class="card mb-4 box-shadow project-img">
-                      <a href="https://github.com/w0436300/CameraMaster.git" target="_blank">
-                        <img class="card-img-top"
-                          data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                          alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                          src="public/img/cameraMaster.png" data-holder-rendered="true">
-                      </a>
-    
-                      <div class="card-body">
-                        <h5 class="project-title">MERN stack web application </h5>
-                        <p class="card-text ">The Camera Master Store is a dynamic camera store website that enhances user
-                          experience in discovering, searching, and managing camera information<br />
-                        </p>
-                        <p class="custom-primary">Technologies:<br />
-                          Node.js and Express.js<br />
-                          MongoDB with Mongoose<br />
-                          React.js<br />
-                         </p>
-    
-                      </div>
-                      <div class="card-footer">
-                        <div class="d-flex justify-content-end ">
-                          <a class='link-style' href="https://github.com/w0436300/CameraMaster.git"
-                            target="_blank">Source Code</a>
-                        </div>
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-end">
+                        <a
+                          class="link-style"
+                          href="https://github.com/w0436300/Albums_express.git"
+                          target="_blank"
+                          >Source Code</a
+                        >
                       </div>
                     </div>
                   </div>
-
-            <!-- design -->
-             <!-- 0.0. design -->
-             <div class="col-md-4 project-card hidden" data-category="design">
-              <div class="card mb-4 box-shadow project-img"
-              data-title="Analytics Dashboard"
-              data-description="dashboard"
-              data-image="/public/img/design-dashboard.png"
-              data-tech="Adobe"
-            >
-            
-
-                <a href="https://github.com/w0436300/E-commerce" target="_blank">
-                  <img class="card-img-top"
-                    data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                    alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                    src="/public/img/dashboard2.png" data-holder-rendered="true" />
-                </a>
-
-                <div class="card-body">
-                  <h5 class="project-title">Analytics Dashboard</h5>
-                  <p class="custom-primary" class="card-text">Figma</p>
-                  <p class="custom-primary" class="card-text">React</p>
-                  <p class="custom-primary" class="card-text">Backend: Express</p>
-                  <p class="custom-primary" class="card-text">Database: MongoDB</p>
-
                 </div>
-                <div class="card-footer">
-                  <div class="d-flex justify-content-end "> 
+
+                <!-- 9.  Electron-video-player-converter-application- -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="fullstack"
+                >
+                  <div class="card mb-4 box-shadow project-img">
+                    <a
+                      href="https://github.com/w0436300/E-commerce"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/electron.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
+
+                    <div class="card-body">
+                      <h5 class="project-title">
+                        Video player converter application
+                      </h5>
+                      <p class="custom-primary" class="card-text">Electron</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-end">
+                        <a
+                          class="link-style"
+                          href="https://github.com/w0436300/Electron-video-player-converter-application.git"
+                          target="_blank"
+                          >Source Code</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 10.  SocketIO -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="fullstack"
+                >
+                  <div class="card mb-4 box-shadow project-img">
+                    <a
+                      href="https://github.com/w0436300/E-commerce"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/chatroom.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
+
+                    <div class="card-body">
+                      <h5 class="project-title">Chatroom</h5>
+                      <p class="custom-primary" class="card-text">SocketIO</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-end">
+                        <a
+                          class="link-style"
+                          href="https://github.com/w0436300/Chatroom-SocketIO.git"
+                          target="_blank"
+                          >Source Code</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 4. 3inrow -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="fullstack"
+                >
+                  <div class="card mb-4 box-shadow project-img">
+                    <a
+                      href="./public/projects/project1/index.html"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/3inarow.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
+
+                    <div class="card-body">
+                      <h5 class="project-title">Three in a Row Game</h5>
+                      <p class="custom-primary" class="card-text">
+                        Frontend: HTML, CSS, JavaScript
+                      </p>
+                      <p class="custom-primary" class="card-text">Fetch API</p>
+                    </div>
+                    <div class="card-footer">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <a
+                          class="link-style"
+                          href="./public/projects/project1/index.html"
+                          target="_blank"
+                          >Demo</a
+                        >
+                        <a
+                          class="link-style"
+                          href="https://github.com/w0436300/three-in-a-row-with-Testing-Strategy.git"
+                          target="_blank"
+                          >Source Code</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. mernstack -->
+                <div
+                  class="col-md-4 project-card hidden project-img"
+                  data-category="fullstack"
+                >
+                  <div class="card mb-4 box-shadow project-img">
+                    <a
+                      href="https://github.com/w0436300/CameraMaster.git"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="public/img/cameraMaster.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
+
+                    <div class="card-body">
+                      <h5 class="project-title">MERN stack web application</h5>
+                      <p class="card-text">
+                        The Camera Master Store is a dynamic camera store
+                        website that enhances user experience in discovering,
+                        searching, and managing camera information<br />
+                      </p>
+                      <p class="custom-primary">
+                        Technologies:<br />
+                        Node.js and Express.js<br />
+                        MongoDB with Mongoose<br />
+                        React.js<br />
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-end">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- design -->
+                <!-- 0.0. design -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="design"
+                >
+                  <div
+                    class="card mb-4 box-shadow project-img"
+                    data-title="Analytics Dashboard"
+                    data-description="dashboard"
+                    data-image="/public/img/design-dashboard.png"
+                    data-tech="Figma/React"
+                  >
+                    <a
+                      href="https://github.com/w0436300/dashboard"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/dashboard2.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
+
+                    <div class="card-body">
+                      <h5 class="project-title">Analytics Dashboard</h5>
+                      <p class="custom-primary" class="card-text">Figma</p>
+                      <p class="custom-primary" class="card-text">React</p>
+                      <p class="custom-primary" class="card-text">
+                        Backend: Express
+                      </p>
+                      <p class="custom-primary" class="card-text">
+                        Database: MongoDB
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-end">
+                        <a
+                          class="link-style"
+                          href="https://github.com/w0436300/dashboard.git"
+                          target="_blank"
+                          >Source Code</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 0.1. design -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="design"
+                >
+                  <div
+                    class="card mb-4 box-shadow project-img"
+                    data-title="Analytics Dashboard"
+                    data-description="dashboard"
+                    data-image="/public/img/bbc_detail.png"
+                    data-tech="Figma"
+                  >
+                    <!-- <a
+                      href="https://github.com/w0436300/dashboard"
+                      target="_blank"
+                    > -->
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/bbc_home.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
+
+                    <div class="card-body">
+                      <h5 class="project-title">BBC Learning English Visual Style Guide</h5>
+                      <p class="custom-primary" class="card-text">Figma</p>
+                  
+                      <!-- <p class="custom-primary" class="card-text">
+                        Database: MongoDB
+                      </p> -->
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-flex justify-content-end">
+                        <!-- <a
+                          class="link-style"
+                          href="https://github.com/w0436300/dashboard.git"
+                          target="_blank"
+                          >Source Code</a
+                        > -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 02. design -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="design"
+                >
+                  <div
+                    class="card mb-4 box-shadow project-img"
+                    data-title="The concept of Sign Design"
+                    data-description="Hospital"
+                    data-image="/public/img/hospital0-0.png"
+                    data-tech="Adobe"
+                  >
+                    <a
+                      href="https://github.com/w0436300/E-commerce"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/hospital.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
+
+                    <div class="card-body">
+                      <h5 class="project-title">The concept of Sign Design</h5>
+                      <p class="custom-primary" class="card-text">Adobe cc</p>
+                      <!-- <p class="custom-primary" class="card-text">Backend: Express</p>
+                  <p class="custom-primary" class="card-text">Database: MongoDB</p> -->
+                    </div>
+                    <div class="card-footer">
+                      <!-- <div class="d-flex justify-content-end "> 
                     <a class='link-style' href="https://github.com/w0436300/dashboard.git"
                       target="_blank">Source Code</a>
+                  </div> -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 1.1. design -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="design"
+                >
+                  <div
+                    class="card mb-4 box-shadow project-img"
+                    data-title="Packaging Design"
+                    data-description="Sound in the sea"
+                    data-image="/public/img/design1.png"
+                    data-tech="Adobe"
+                  >
+                    <a
+                      href="https://github.com/w0436300/E-commerce"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/design1-1.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
+
+                    <div class="card-body">
+                      <h5 class="project-title">Packaging Design</h5>
+                      <p class="custom-primary" class="card-text">Adobe cc</p>
+                      <!-- <p class="custom-primary" class="card-text">Backend: Express</p>
+                  <p class="custom-primary" class="card-text">Database: MongoDB</p> -->
+                    </div>
+                    <div class="card-footer">
+                      <!-- <div class="d-flex justify-content-end "> 
+                    <a class='link-style' href="https://github.com/w0436300/dashboard.git"
+                      target="_blank">Source Code</a>
+                  </div> -->
+                    </div>
+                  </div>
+                </div>
+                <!-- 2.2. design -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="design"
+                >
+                  <div
+                    class="card mb-4 box-shadow project-img"
+                    data-title="Logo Design"
+                    data-description="Ice Festivel"
+                    data-image="/public/img/design2.png"
+                    data-tech="Adobe"
+                  >
+                    <a
+                      href="https://github.com/w0436300/E-commerce"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/design2-2.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
+
+                    <div class="card-body">
+                      <h5 class="project-title">Logo Design</h5>
+                      <p class="custom-primary" class="card-text">Adobe cc</p>
+                      <!-- <p class="custom-primary" class="card-text">Backend: Express</p>
+                  <p class="custom-primary" class="card-text">Database: MongoDB</p> -->
+                    </div>
+                    <div class="card-footer">
+                      <!-- <div class="d-flex justify-content-end "> 
+                    <a class='link-style' href="https://github.com/w0436300/dashboard.git"
+                      target="_blank">Source Code</a>
+                  </div> -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3.3. design -->
+                <div
+                  class="col-md-4 project-card hidden"
+                  data-category="design"
+                >
+                  <div
+                    class="card mb-4 box-shadow project-img"
+                    data-title="Book Design"
+                    data-description="Wedding"
+                    data-image="/public/img/wedding.png"
+                    data-tech="Adobe"
+                  >
+                    <a
+                      href="https://github.com/w0436300/E-commerce"
+                      target="_blank"
+                    >
+                      <img
+                        class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]"
+                        style="height: 225; width: '100%'; display: 'block'"
+                        src="/public/img/design3-3.png"
+                        data-holder-rendered="true"
+                      />
+                    </a>
+
+                    <div class="card-body">
+                      <h5 class="project-title">Book Design</h5>
+                      <p class="custom-primary" class="card-text">Adobe cc</p>
+                      <!-- <p class="custom-primary" class="card-text">Backend: Express</p>
+                  <p class="custom-primary" class="card-text">Database: MongoDB</p> -->
+                    </div>
+                    <div class="card-footer">
+                      <!-- <div class="d-flex justify-content-end "> 
+                    <a class='link-style' href="https://github.com/w0436300/dashboard.git"
+                      target="_blank">Source Code</a>
+                  </div> -->
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            
-             <!-- 0.0. design -->
-             <div class="col-md-4 project-card hidden" data-category="design">
-              <div class="card mb-4 box-shadow project-img"
-              data-title="The concept of Sign Design"
-              data-description="Hospital"
-              data-image="/public/img/hospital0-0.png"
-              data-tech="Adobe"
+          </div>
+        </div>
+      </div>
+
+      <!-- Project End -->
+
+      <!-- contact start-->
+
+      <div id="contact" class="container">
+        <div class="text-center">
+          <small
+            class="d-inline-block fw-bold text-uppercase mt-4 mb-2 text-dark"
+            >GET IN TOUCH</small
+          >
+          <h1 class="text-dark">Contact Me</h1>
+        </div>
+        <div class="contact-form text-center">
+          <h4>
+            <a
+              href="mailto:xinpingxh@gmail.com"
+              class="btn btn-warning text-white custom-link"
+              >Send me an email</a
             >
-            
+          </h4>
+          <div class="social-links-container icon mt-3 mb-2">
+            <a
+              class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn"
+              target="_blank"
+              href="https://github.com/w0436300"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn"
+              target="_blank"
+              href="https://www.linkedin.com/in/xinping-w/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
 
-                <a href="https://github.com/w0436300/E-commerce" target="_blank">
-                  <img class="card-img-top"
-                    data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                    alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                    src="/public/img/hospital.png" data-holder-rendered="true" />
-                </a>
+      <!-- contact end-->
 
-                <div class="card-body">
-                  <h5 class="project-title">The concept of Sign Design</h5>
-                  <p class="custom-primary" class="card-text">Adobe cc</p>
-                  <!-- <p class="custom-primary" class="card-text">Backend: Express</p>
-                  <p class="custom-primary" class="card-text">Database: MongoDB</p> -->
-
+      <!-- Loading Modal -->
+      <div
+        class="modal fade"
+        id="loadingModal"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-transparent border-0">
+            <div class="modal-body text-center text-white">
+              <div class="spinner-border text-light mb-3" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <p class="mb-0">Loading project details...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="projectModal"
+        tabindex="-1"
+        aria-labelledby="projectModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <h5 class="modal-title" id="projectModalLabel"></h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <img
+                    id="modalImage"
+                    src=""
+                    alt="Project Image"
+                    class="img-fluid rounded"
+                  />
                 </div>
-                <div class="card-footer">
-                  <!-- <div class="d-flex justify-content-end "> 
-                    <a class='link-style' href="https://github.com/w0436300/dashboard.git"
-                      target="_blank">Source Code</a>
-                  </div> -->
+                <div class="col-md-4">
+                  <h4 id="modalTitle" class="mb-3"></h4>
+                  <div id="modalDescription" class="mb-3"></div>
+                  <div id="modalTech" class="mb-3">
+                    <h5>Technologies:</h5>
+                    <ul class="list-unstyled"></ul>
+                  </div>
+                  <div id="modalLinks" class="d-flex gap-2"></div>
                 </div>
               </div>
             </div>
-
-             <!-- 1.1. design -->
-             <div class="col-md-4 project-card hidden" data-category="design">
-              <div class="card mb-4 box-shadow project-img"
-              data-title="Packaging Design"
-              data-description="Sound in the sea"
-              data-image="/public/img/design1.png"
-              data-tech="Adobe"
-            >
-            
-
-                <a href="https://github.com/w0436300/E-commerce" target="_blank">
-                  <img class="card-img-top"
-                    data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                    alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                    src="/public/img/design1-1.png" data-holder-rendered="true" />
-                </a>
-
-                <div class="card-body">
-                  <h5 class="project-title">Packaging Design</h5>
-                  <p class="custom-primary" class="card-text">Adobe cc</p>
-                  <!-- <p class="custom-primary" class="card-text">Backend: Express</p>
-                  <p class="custom-primary" class="card-text">Database: MongoDB</p> -->
-
-                </div>
-                <div class="card-footer">
-                  <!-- <div class="d-flex justify-content-end "> 
-                    <a class='link-style' href="https://github.com/w0436300/dashboard.git"
-                      target="_blank">Source Code</a>
-                  </div> -->
-                </div>
-              </div>
-            </div>
-             <!-- 2.2. design -->
-             <div class="col-md-4 project-card hidden" data-category="design">
-              <div class="card mb-4 box-shadow project-img"
-              data-title="Logo Design"
-              data-description="Ice Festivel"
-              data-image="/public/img/design2.png"
-              data-tech="Adobe"
-            >
-            
-
-                <a href="https://github.com/w0436300/E-commerce" target="_blank">
-                  <img class="card-img-top"
-                    data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                    alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                    src="/public/img/design2-2.png" data-holder-rendered="true" />
-                </a>
-
-                <div class="card-body">
-                  <h5 class="project-title">Logo Design</h5>
-                  <p class="custom-primary" class="card-text">Adobe cc</p>
-                  <!-- <p class="custom-primary" class="card-text">Backend: Express</p>
-                  <p class="custom-primary" class="card-text">Database: MongoDB</p> -->
-
-                </div>
-                <div class="card-footer">
-                  <!-- <div class="d-flex justify-content-end "> 
-                    <a class='link-style' href="https://github.com/w0436300/dashboard.git"
-                      target="_blank">Source Code</a>
-                  </div> -->
-                </div>
-              </div>
-            </div>
-
-             <!-- 3.3. design -->
-             <div class="col-md-4 project-card hidden" data-category="design">
-              <div class="card mb-4 box-shadow project-img"
-              data-title="Book Design"
-              data-description="Wedding"
-              data-image="/public/img/wedding.png"
-              data-tech="Adobe"
-            >
-            
-
-                <a href="https://github.com/w0436300/E-commerce" target="_blank">
-                  <img class="card-img-top"
-                    data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-                    alt="Thumbnail [100%x225]" style="height: 225; width: '100%'; display: 'block'"
-                    src="/public/img/design3-3.png" data-holder-rendered="true" />
-                </a>
-
-                <div class="card-body">
-                  <h5 class="project-title">Book Design</h5>
-                  <p class="custom-primary" class="card-text">Adobe cc</p>
-                  <!-- <p class="custom-primary" class="card-text">Backend: Express</p>
-                  <p class="custom-primary" class="card-text">Database: MongoDB</p> -->
-
-                </div>
-                <div class="card-footer">
-                  <!-- <div class="d-flex justify-content-end "> 
-                    <a class='link-style' href="https://github.com/w0436300/dashboard.git"
-                      target="_blank">Source Code</a>
-                  </div> -->
-                </div>
-              </div>
-            </div>
-           
-
-
-            </div>
           </div>
         </div>
       </div>
 
-
-
+      <!-- Footer Start -->
+      <footer class="text-center custom-footer">
+        <div class="container p-1">
+          <div class="row">
+            <div class="mb-1">
+              <h6>Xinping Wang</h6>
+            </div>
+            <div class="text-center">
+              © 2023 Copyright:
+              <a class="text-dark" href="#">claire-xinping.com</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer End  -->
     </div>
+    <!-- id=app -->
+    <!-- </div> -->
 
-    <!-- Project End -->
+    <!-- Import Components -->
+    <script src="./public/js/main.js"></script>
+    <script src="./public/components/ContactForm.js"></script>
+    <script src="./public/components/About.js"></script>
 
-    <!-- contact start-->
-
-    <div id="contact" class="container">
-      <div class="text-center ">
-        <small class="d-inline-block fw-bold text-uppercase mt-4 mb-2 text-dark">GET IN TOUCH</small>
-        <h1 class="text-dark">Contact Me</h1>
-      </div>
-      <div class=" contact-form text-center">
-        <h4>
-          <a href="mailto:xinpingxh@gmail.com" class="btn btn-warning text-white custom-link">Send me an email</a>
-        </h4>
-        <div class="social-links-container icon mt-3 mb-2">
-          <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target="_blank"
-            href="https://github.com/w0436300"><i class="fab fa-github"></i></a>
-          <a class="share-link btn btn-success btn-md-square rounded-circle mb-2 me-2 custom-btn" target="_blank"
-            href="https://www.linkedin.com/in/xinping-w/"><i class="fab fa-linkedin"></i></a>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- contact end-->
-
-    <!-- Loading Modal -->
-<div class="modal fade" id="loadingModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-transparent border-0">
-      <div class="modal-body text-center text-white">
-        <div class="spinner-border text-light mb-3" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-        <p class="mb-0">Loading project details...</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="projectModalLabel"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-8">
-            <img id="modalImage" src="" alt="Project Image" class="img-fluid rounded">
-          </div>
-          <div class="col-md-4">
-            <h4 id="modalTitle" class="mb-3"></h4>
-            <div id="modalDescription" class="mb-3"></div>
-            <div id="modalTech" class="mb-3">
-              <h5>Technologies:</h5>
-              <ul class="list-unstyled"></ul>
-            </div>
-            <div id="modalLinks" class="d-flex gap-2">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-    <!-- Footer Start -->
-    <footer class="text-center custom-footer">
-      <div class="container p-1">
-        <div class="row">
-          <div class="  mb-1 ">
-            <h6>
-              Xinping Wang
-
-            </h6>
-          </div>
-          <div class=" text-center ">
-            © 2023 Copyright:
-            <a class="text-dark" href="#">claire-xinping.com</a>
-          </div>
-
-
-        </div>
-      </div>
-
-    </footer>
-    <!-- Footer End  -->
-  </div><!-- id=app -->
-  <!-- </div> -->
-
-
-  <!-- Import Components -->
-  <script src="./public/js/main.js"></script>
-  <script src="./public/components/ContactForm.js"></script>
-  <script src="./public/components/About.js"></script>
-
-  <!-- Mount App -->
-  <script>
-    const mountedApp = app.mount('#app')
-  </script>
-
-</body>
-
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount("#app");
+    </script>
+  </body>
 </html>
