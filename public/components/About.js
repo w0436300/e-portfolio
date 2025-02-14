@@ -36,7 +36,7 @@ app.component('about-section', {
             loop: true,
         });
         new Typed('.typed-text', {
-            strings: ["Crafting Creative and Delightful Digital Experiences through Code and Design.<br>I create web pages with UI / UX user interface."],
+            strings: ["Design. Code. Analyze.<br/> I am passionate about transforming complex data into intuitive, engaging interfaces. My work blends creative design, front-end development, and powerful analytics to create impactful digital experiences."],
             startDelay : 1 ,
             typeSpeed: 15,
             loop: false,
